@@ -24,7 +24,7 @@ summary = "Lift: Upper A + Easy Run"
 day = "MO"
 start = "06:30"
 duration_minutes = 60
-sequence = 1
+sequence = 2
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 description = """
@@ -56,6 +56,12 @@ Stop at 7:30 even if unfinished.
 After lift:
 - Easy treadmill run: 2 miles or 20 min cap, whichever comes first.
 
+Here's your abs:
+- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
+- Last set: drop the weight 20-30% and rep out close to failure.
+- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
+- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
+
 Minimum version:
 - Warm-up, bench/push-up, row/pull, 10 min easy jog.
 """
@@ -67,7 +73,7 @@ summary = "Lift: Lower A + Low-Impact Finish"
 day = "TU"
 start = "06:30"
 duration_minutes = 60
-sequence = 1
+sequence = 2
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 description = """
@@ -99,6 +105,12 @@ Stop at 7:30 even if unfinished. No hard running after lower body.
 Finish:
 - Pick one easy option for 8-12 min: incline walk, bike, row, sled, carries, or very light jump rope technique.
 
+Here's your abs:
+- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
+- Last set: drop the weight 20-30% and rep out close to failure.
+- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
+- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
+
 Minimum version:
 - Warm-up, squat pattern, hinge pattern, core.
 """
@@ -110,7 +122,7 @@ summary = "Choice: Swim 20 or Glory Muscles"
 day = "WE"
 start = "06:30"
 duration_minutes = 60
-sequence = 1
+sequence = 2
 location = "Pool, gym, or home"
 categories = ["FITNESS", "CHOICE", "SWIM", "ACCESSORIES"]
 description = """
@@ -144,6 +156,12 @@ Option B - No equipment:
 - Hollow hold + calf raise: 4 rounds.
 - Mobility: 5 min.
 
+Here's your abs:
+- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
+- Last set: drop the weight 20-30% and rep out close to failure.
+- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
+- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
+
 Minimum version:
 - 20 min easy swim, walk, mobility, or core.
 """
@@ -155,7 +173,7 @@ summary = "Lift: Upper B + Easy Run"
 day = "TH"
 start = "06:30"
 duration_minutes = 60
-sequence = 1
+sequence = 2
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 description = """
@@ -188,6 +206,12 @@ Stop at 7:30 even if unfinished.
 After lift:
 - Easy treadmill run: 2 miles or 20 min cap, whichever comes first.
 
+Here's your abs:
+- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
+- Last set: drop the weight 20-30% and rep out close to failure.
+- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
+- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
+
 Minimum version:
 - Warm-up, press, pull, 10 min easy jog.
 """
@@ -199,7 +223,7 @@ summary = "Lift: Lower B + Low-Impact Finish"
 day = "FR"
 start = "06:30"
 duration_minutes = 60
-sequence = 1
+sequence = 2
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 description = """
@@ -231,6 +255,12 @@ Stop at 7:30 even if unfinished. No hard running after lower body.
 
 Finish:
 - Pick one easy option for 8-12 min: incline walk, bike, row, sled, carries, or mobility.
+
+Here's your abs:
+- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
+- Last set: drop the weight 20-30% and rep out close to failure.
+- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
+- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
 
 Minimum version:
 - Warm-up, hinge pattern, lunge pattern, core.
