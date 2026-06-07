@@ -1,0 +1,68 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Rowland Pettit//Workout Calendar//EN
+X-WR-CALNAME:Rowland Fitness - Cardio
+X-WR-CALDESC:Dedicated weekend endurance calendar.
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+X-APPLE-CALENDAR-COLOR:#c94f2d
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:cardio-long-run@workout-calendar.rowlandpettit
+DTSTAMP:20260607T155209Z
+LAST-MODIFIED:20260607T155209Z
+SEQUENCE:0
+DTSTART;TZID=America/New_York:20260613T090000
+DTEND;TZID=America/New_York:20260613T101500
+RRULE:FREQ=WEEKLY
+SUMMARY:Run: Long Easy 4-6 mi
+DESCRIPTION:Long run starts at 9:00 AM.\n\nGoal:\n- 4-6 miles easy\, conver
+ sational pace.\n- Start near 4 miles. Hold 4-6 miles for the first few we
+ eks before building.\n- No pace chasing. This is discipline and aerobic b
+ ase.\n\nSimple progression:\n- Weeks 1-2: 4 miles.\n- Weeks 3-4: 5 miles.
+ \n- Weeks 5+: 6 miles if recovering well.\n- Every fourth week: cut back 
+ to 4 miles.\n\nMinimum version:\n- 30 min easy run/walk.
+LOCATION:Outside or treadmill
+CATEGORIES:FITNESS,CARDIO,RUN
+END:VEVENT
+BEGIN:VEVENT
+UID:cardio-long-swim@workout-calendar.rowlandpettit
+DTSTAMP:20260607T155209Z
+LAST-MODIFIED:20260607T155209Z
+SEQUENCE:0
+DTSTART;TZID=America/New_York:20260614T090000
+DTEND;TZID=America/New_York:20260614T100000
+RRULE:FREQ=WEEKLY
+SUMMARY:Swim: Structured Long Swim
+DESCRIPTION:Long swim starts at 9:00 AM. Smooth\, structured\, not just wan
+ dering around the pool.\n\nWarm-up:\n- 200 easy.\n- 4 x 50 drill/build: c
+ atch-up\, fingertip drag\, kick\, choice.\n\nMain set:\n- Ladder: 100\, 2
+ 00\, 300\, 200\, 100 with 20 sec rest.\n- 4 x 100 as 75 smooth + 25 stron
+ g\, 20 sec rest.\n\nCool-down:\n- 100 easy.\n\nTotal:\n- Full version: ab
+ out 1\,700.\n- Short version: stop after the ladder\, about 1\,100.\n\nMi
+ nimum version:\n- 20-30 min relaxed swim\, keep moving\, leave feeling be
+ tter.
+LOCATION:Pool
+CATEGORIES:FITNESS,CARDIO,SWIM
+END:VEVENT
+END:VCALENDAR

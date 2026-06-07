@@ -1,0 +1,49 @@
+# Rowland Fitness Calendar
+
+Subscribed workout calendars generated from one editable source file.
+
+## Live Feeds
+
+After GitHub Pages deploys, subscribe to these URLs in Apple Calendar:
+
+- Lifting: `webcal://rowlandpettit.github.io/workout-calendar/lifting.ics`
+- Cardio: `webcal://rowlandpettit.github.io/workout-calendar/cardio.ics`
+- Combined: `webcal://rowlandpettit.github.io/workout-calendar/workouts.ics`
+
+Use either the separate lifting/cardio feeds or the combined feed, not both, unless you want duplicate events.
+
+## Edit The Plan
+
+Edit `workouts.toml`. The key source fields are:
+
+- `summary`: calendar event title
+- `day`: `MO`, `TU`, `WE`, `TH`, `FR`, `SA`, or `SU`
+- `start`: local start time
+- `duration_minutes`: calendar block length
+- `description`: event notes shown in Apple Calendar
+
+Keep each event `id` stable. That keeps Apple Calendar seeing edits as updates instead of unrelated new events.
+
+## Generate Locally
+
+```bash
+make generate
+```
+
+Generated feeds are written to `public/`:
+
+- `public/lifting.ics`
+- `public/cardio.ics`
+- `public/workouts.ics`
+
+## Validate
+
+```bash
+make validate
+```
+
+## Publish
+
+Push to `main`. GitHub Actions regenerates the feeds and deploys `public/` as the GitHub Pages site.
+
+Apple Calendar subscriptions refresh on their own schedule, so changes may not appear instantly.
