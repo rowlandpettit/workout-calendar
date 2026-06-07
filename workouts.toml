@@ -2,7 +2,7 @@
 start_date = "2026-06-08"
 timezone = "America/New_York"
 namespace = "workout-calendar.rowlandpettit"
-site_url = "https://rowlandpettit.github.io/workout-calendar"
+site_url = "https://rowlandpettit.com/workout-calendar"
 sequence = 0
 
 [feeds.lifting]

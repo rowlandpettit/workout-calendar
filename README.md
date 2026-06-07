@@ -6,9 +6,9 @@ Subscribed workout calendars generated from one editable source file.
 
 After GitHub Pages deploys, subscribe to these URLs in Apple Calendar:
 
-- Lifting: `webcal://rowlandpettit.github.io/workout-calendar/lifting.ics`
-- Cardio: `webcal://rowlandpettit.github.io/workout-calendar/cardio.ics`
-- Combined: `webcal://rowlandpettit.github.io/workout-calendar/workouts.ics`
+- Lifting: `webcal://rowlandpettit.com/workout-calendar/lifting.ics`
+- Cardio: `webcal://rowlandpettit.com/workout-calendar/cardio.ics`
+- Combined: `webcal://rowlandpettit.com/workout-calendar/workouts.ics`
 
 Use either the separate lifting/cardio feeds or the combined feed, not both, unless you want duplicate events.
 
@@ -35,6 +35,8 @@ Generated feeds are written to `public/`:
 - `public/lifting.ics`
 - `public/cardio.ics`
 - `public/workouts.ics`
+
+The generated files are not tracked in git. GitHub Actions regenerates them on every push and deploys `public/` as the live subscribed-calendar site.
 
 ## Validate
 
