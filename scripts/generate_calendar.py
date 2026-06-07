@@ -143,7 +143,13 @@ def vtimezone(timezone_name: str) -> list[str]:
     ]
 
 
-def event_lines(event: dict, feed_id: str, settings: Settings, dtstamp: str) -> list[str]:
+def event_lines(
+    event: dict,
+    feed_id: str,
+    settings: Settings,
+    dtstamp: str,
+    log_form_url: str,
+) -> list[str]:
     event_id = slug(event["id"])
     event_date = first_occurrence(settings.start_date, event["day"])
     hour, minute = parse_time(event["start"])
@@ -159,6 +165,12 @@ def event_lines(event: dict, feed_id: str, settings: Settings, dtstamp: str) -> 
     end = start + timedelta(minutes=int(event["duration_minutes"]))
     uid = f"{feed_id}-{event_id}@{settings.namespace}"
 
+    description = event["description"].strip()
+    if event.get("log_link", True):
+        form_url = event.get("form_url") or log_form_url
+        if form_url:
+            description = f"{description}\n\nLog workout:\n{form_url}"
+
     lines = [
         "BEGIN:VEVENT",
         prop("UID", uid),
@@ -169,7 +181,7 @@ def event_lines(event: dict, feed_id: str, settings: Settings, dtstamp: str) -> 
         raw_prop(end_prop, end.strftime("%Y%m%dT%H%M%S")),
         "RRULE:FREQ=WEEKLY",
         prop("SUMMARY", event["summary"]),
-        prop("DESCRIPTION", event["description"].strip()),
+        prop("DESCRIPTION", description),
         prop("LOCATION", event.get("location", "")),
     ]
 
@@ -188,6 +200,7 @@ def calendar_lines(
     events: list[dict],
     settings: Settings,
     dtstamp: str,
+    log_form_url: str = "",
 ) -> list[str]:
     lines = [
         "BEGIN:VCALENDAR",
@@ -211,7 +224,7 @@ def calendar_lines(
         lines.extend(vtimezone(settings.timezone_name))
 
     for event in events:
-        lines.extend(event_lines(event, feed_id, settings, dtstamp))
+        lines.extend(event_lines(event, feed_id, settings, dtstamp, log_form_url))
 
     lines.append("END:VCALENDAR")
     return lines
@@ -287,6 +300,8 @@ def generate(root: Path) -> None:
     settings = parse_settings(plan)
     feeds = plan["feeds"]
     events = plan.get("events", [])
+    logging = plan.get("logging", {})
+    log_form_url = logging.get("form_url", "")
     dtstamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
     by_feed = {feed_id: [] for feed_id in feeds}
@@ -301,6 +316,7 @@ def generate(root: Path) -> None:
             events=feed_events,
             settings=settings,
             dtstamp=dtstamp,
+            log_form_url=log_form_url,
         )
         write_calendar(public_dir / feed["filename"], lines)
 
@@ -316,6 +332,7 @@ def generate(root: Path) -> None:
         events=events,
         settings=settings,
         dtstamp=dtstamp,
+        log_form_url=log_form_url,
     )
     write_calendar(public_dir / all_feed["filename"], all_lines)
 

@@ -14,6 +14,8 @@ Use either the separate lifting/cardio feeds or the combined feed, not both, unl
 
 Workout times are generated as floating local times. A `6:30 AM` workout should stay at `6:30 AM` wherever the calendar is being viewed, instead of converting from Eastern time.
 
+Each event includes a `Log workout` link to the Google Form. Responses land in the linked `Workout Log (Responses)` Google Sheet.
+
 ## Edit The Plan
 
 Edit `workouts.toml`. The key source fields are:
