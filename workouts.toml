@@ -8,7 +8,7 @@ sequence = 0
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
-description = "Weekday lifting calendar with tight 7-8 AM sessions."
+description = "Weekday lifting calendar with tight 6:30-7:30 AM sessions."
 color = "#1f7a5c"
 
 [feeds.cardio]
@@ -22,12 +22,13 @@ feed = "lifting"
 id = "upper-a"
 summary = "Lift: Upper A + Easy Run"
 day = "MO"
-start = "07:00"
+start = "06:30"
 duration_minutes = 60
+sequence = 1
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 description = """
-Stop at 8:00 even if unfinished.
+Stop at 7:30 even if unfinished.
 
 5 min warm-up:
 - Easy walk or bike, shoulder circles, band pull-aparts, 10 push-ups.
@@ -64,12 +65,13 @@ feed = "lifting"
 id = "lower-a"
 summary = "Lift: Lower A + Low-Impact Finish"
 day = "TU"
-start = "07:00"
+start = "06:30"
 duration_minutes = 60
+sequence = 1
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 description = """
-Stop at 8:00 even if unfinished. No hard running after lower body.
+Stop at 7:30 even if unfinished. No hard running after lower body.
 
 5 min warm-up:
 - Easy bike or walk, hip circles, bodyweight squats, glute bridges.
@@ -106,13 +108,14 @@ feed = "lifting"
 id = "wednesday-choice"
 summary = "Choice: Swim 20 or Glory Muscles"
 day = "WE"
-start = "07:00"
+start = "06:30"
 duration_minutes = 60
+sequence = 1
 location = "Pool, gym, or home"
 categories = ["FITNESS", "CHOICE", "SWIM", "ACCESSORIES"]
 description = """
 Wednesday is a choice day. Keep it useful, not crushing.
-Stop at 8:00 even if unfinished.
+Stop at 7:30 even if unfinished.
 
 Option A - Swim 20:
 - 4 x 50 easy warm-up.
@@ -150,12 +153,13 @@ feed = "lifting"
 id = "upper-b"
 summary = "Lift: Upper B + Easy Run"
 day = "TH"
-start = "07:00"
+start = "06:30"
 duration_minutes = 60
+sequence = 1
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 description = """
-Stop at 8:00 even if unfinished.
+Stop at 7:30 even if unfinished.
 
 5 min warm-up:
 - Easy walk or bike, shoulder circles, scap push-ups, light rows.
@@ -193,12 +197,13 @@ feed = "lifting"
 id = "lower-b"
 summary = "Lift: Lower B + Low-Impact Finish"
 day = "FR"
-start = "07:00"
+start = "06:30"
 duration_minutes = 60
+sequence = 1
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 description = """
-Stop at 8:00 even if unfinished. No hard running after lower body.
+Stop at 7:30 even if unfinished. No hard running after lower body.
 
 5 min warm-up:
 - Easy bike or walk, hamstring sweeps, hip airplanes, bodyweight lunges.
