@@ -1,6 +1,7 @@
 [settings]
 start_date = "2026-06-08"
 timezone = "America/New_York"
+floating_times = true
 namespace = "workout-calendar.rowlandpettit"
 site_url = "https://rowlandpettit.com/workout-calendar"
 sequence = 0
@@ -24,7 +25,7 @@ summary = "Lift: Upper A + Easy Run"
 day = "MO"
 start = "06:30"
 duration_minutes = 60
-sequence = 2
+sequence = 3
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 description = """
@@ -73,7 +74,7 @@ summary = "Lift: Lower A + Low-Impact Finish"
 day = "TU"
 start = "06:30"
 duration_minutes = 60
-sequence = 2
+sequence = 3
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 description = """
@@ -122,7 +123,7 @@ summary = "Choice: Swim 20 or Glory Muscles"
 day = "WE"
 start = "06:30"
 duration_minutes = 60
-sequence = 2
+sequence = 3
 location = "Pool, gym, or home"
 categories = ["FITNESS", "CHOICE", "SWIM", "ACCESSORIES"]
 description = """
@@ -173,7 +174,7 @@ summary = "Lift: Upper B + Easy Run"
 day = "TH"
 start = "06:30"
 duration_minutes = 60
-sequence = 2
+sequence = 3
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 description = """
@@ -223,7 +224,7 @@ summary = "Lift: Lower B + Low-Impact Finish"
 day = "FR"
 start = "06:30"
 duration_minutes = 60
-sequence = 2
+sequence = 3
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 description = """
@@ -271,12 +272,13 @@ feed = "cardio"
 id = "long-run"
 summary = "Run: Long Easy 4-6 mi"
 day = "SA"
-start = "09:00"
-duration_minutes = 75
+start = "06:30"
+duration_minutes = 90
+sequence = 1
 location = "Outside or treadmill"
 categories = ["FITNESS", "CARDIO", "RUN"]
 description = """
-Long run starts at 9:00 AM.
+Long run starts at 6:30 local time.
 
 Goal:
 - 4-6 miles easy, conversational pace.
@@ -298,12 +300,13 @@ feed = "cardio"
 id = "long-swim"
 summary = "Swim: Structured Long Swim"
 day = "SU"
-start = "09:00"
+start = "06:30"
 duration_minutes = 60
+sequence = 1
 location = "Pool"
 categories = ["FITNESS", "CARDIO", "SWIM"]
 description = """
-Long swim starts at 9:00 AM. Smooth, structured, not just wandering around the pool.
+Long swim starts at 6:30 local time. Smooth, structured, not just wandering around the pool.
 
 Warm-up:
 - 200 easy.

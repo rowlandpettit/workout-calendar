@@ -19,7 +19,10 @@ def main() -> None:
         assert "END:VCALENDAR" in text, f"{filename}: missing END:VCALENDAR"
         assert "UID:" in text, f"{filename}: missing UID"
         assert "DTSTAMP:" in text, f"{filename}: missing DTSTAMP"
-        assert "TZID=America/New_York" in text, f"{filename}: missing timezone"
+        assert "DTSTART:" in text, f"{filename}: missing floating DTSTART"
+        assert "DTEND:" in text, f"{filename}: missing floating DTEND"
+        assert "DTSTART;TZID=" not in text, f"{filename}: DTSTART should be floating"
+        assert "BEGIN:VTIMEZONE" not in text, f"{filename}: should not include VTIMEZONE"
         print(f"OK public/{filename}")
 
 

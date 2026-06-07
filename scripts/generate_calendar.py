@@ -35,6 +35,7 @@ DAY_INDEX = {
 class Settings:
     start_date: date
     timezone_name: str
+    floating_times: bool
     namespace: str
     site_url: str
     sequence: int
@@ -53,6 +54,7 @@ def parse_settings(plan: dict) -> Settings:
     return Settings(
         start_date=start,
         timezone_name=raw["timezone"],
+        floating_times=bool(raw.get("floating_times", False)),
         namespace=raw["namespace"],
         site_url=raw["site_url"].rstrip("/"),
         sequence=int(raw.get("sequence", 0)),
@@ -145,8 +147,15 @@ def event_lines(event: dict, feed_id: str, settings: Settings, dtstamp: str) -> 
     event_id = slug(event["id"])
     event_date = first_occurrence(settings.start_date, event["day"])
     hour, minute = parse_time(event["start"])
-    tz = ZoneInfo(settings.timezone_name)
-    start = datetime(event_date.year, event_date.month, event_date.day, hour, minute, tzinfo=tz)
+    if settings.floating_times:
+        start = datetime(event_date.year, event_date.month, event_date.day, hour, minute)
+        start_prop = "DTSTART"
+        end_prop = "DTEND"
+    else:
+        tz = ZoneInfo(settings.timezone_name)
+        start = datetime(event_date.year, event_date.month, event_date.day, hour, minute, tzinfo=tz)
+        start_prop = f"DTSTART;TZID={settings.timezone_name}"
+        end_prop = f"DTEND;TZID={settings.timezone_name}"
     end = start + timedelta(minutes=int(event["duration_minutes"]))
     uid = f"{feed_id}-{event_id}@{settings.namespace}"
 
@@ -156,14 +165,8 @@ def event_lines(event: dict, feed_id: str, settings: Settings, dtstamp: str) -> 
         raw_prop("DTSTAMP", dtstamp),
         raw_prop("LAST-MODIFIED", dtstamp),
         raw_prop("SEQUENCE", int(event.get("sequence", settings.sequence))),
-        raw_prop(
-            f"DTSTART;TZID={settings.timezone_name}",
-            start.strftime("%Y%m%dT%H%M%S"),
-        ),
-        raw_prop(
-            f"DTEND;TZID={settings.timezone_name}",
-            end.strftime("%Y%m%dT%H%M%S"),
-        ),
+        raw_prop(start_prop, start.strftime("%Y%m%dT%H%M%S")),
+        raw_prop(end_prop, end.strftime("%Y%m%dT%H%M%S")),
         "RRULE:FREQ=WEEKLY",
         prop("SUMMARY", event["summary"]),
         prop("DESCRIPTION", event["description"].strip()),
@@ -194,15 +197,18 @@ def calendar_lines(
         "PRODID:-//Rowland Pettit//Workout Calendar//EN",
         prop("X-WR-CALNAME", feed["name"]),
         prop("X-WR-CALDESC", feed.get("description", "")),
-        prop("X-WR-TIMEZONE", settings.timezone_name),
         "REFRESH-INTERVAL;VALUE=DURATION:PT1H",
         "X-PUBLISHED-TTL:PT1H",
     ]
 
+    if not settings.floating_times:
+        lines.append(prop("X-WR-TIMEZONE", settings.timezone_name))
+
     if feed.get("color"):
         lines.append(prop("X-APPLE-CALENDAR-COLOR", feed["color"]))
 
-    lines.extend(vtimezone(settings.timezone_name))
+    if not settings.floating_times:
+        lines.extend(vtimezone(settings.timezone_name))
 
     for event in events:
         lines.extend(event_lines(event, feed_id, settings, dtstamp))
