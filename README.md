@@ -12,7 +12,7 @@ After GitHub Pages deploys, subscribe to these URLs in Apple Calendar:
 
 Use either the separate lifting/cardio feeds or the combined feed, not both, unless you want duplicate events.
 
-Workout times are generated as floating local times. A `6:30 AM` workout should stay at `6:30 AM` wherever the calendar is being viewed, instead of converting from Eastern time.
+Workout times are generated as floating local times. A `7:00 AM` workout should stay at `7:00 AM` wherever the calendar is being viewed, instead of converting from Eastern time. Weekday events reserve `7:00-7:30 AM`, while their notes contain an optional full 45-minute menu. Weekend events reserve `7:00-8:00 AM`.
 
 Each event includes a `Log workout` link to the Google Form. Responses land in the linked `Workout Log (Responses)` Google Sheet.
 

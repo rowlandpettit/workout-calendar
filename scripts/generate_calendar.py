@@ -182,7 +182,7 @@ def event_lines(
                 movement_name = movement_id.replace("-", " ").title()
                 link_lines.append(f"- {movement_name}: {movement_url}")
         if link_lines:
-            description = f"{description}\n\nKettlebell demo links:\n" + "\n".join(link_lines)
+            description = f"{description}\n\nMovement demo links:\n" + "\n".join(link_lines)
 
     if event.get("log_link", True):
         form_url = event.get("form_url") or log_form_url

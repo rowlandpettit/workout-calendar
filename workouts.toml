@@ -11,300 +11,236 @@ form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3c
 sheet_url = "https://docs.google.com/spreadsheets/d/1-Dyw9VvBLnzCFyju-YB5v7cMg6bcTbsiG7LIU2CSAW8/edit?resourcekey=&gid=1366017611#gid=1366017611"
 
 [movement_links]
-"ab-wheel-rollout" = "https://www.youtube.com/results?search_query=ab+wheel+rollout+proper+form"
 "cable-rope-crunch" = "https://www.youtube.com/results?search_query=cable+rope+crunch+proper+form"
 "calf-raise" = "https://www.youtube.com/results?search_query=standing+calf+raise+proper+form"
-"clean-press" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+clean+and+press+proper+form"
+"clean-push-press" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+clean+and+push+press+proper+form"
 "close-grip-push-up" = "https://www.youtube.com/results?search_query=close+grip+push+up+proper+form"
-"farmer-carry" = "https://www.youtube.com/results?search_query=kettlebell+farmer+carry+proper+form"
-"floor-press" = "https://www.youtube.com/results?search_query=kettlebell+floor+press+proper+form"
-"front-rack-squat" = "https://www.youtube.com/results?search_query=kettlebell+front+rack+squat+proper+form"
+"crush-curl" = "https://www.youtube.com/results?search_query=kettlebell+crush+curl+proper+form"
+"dead-bug" = "https://www.youtube.com/results?search_query=dead+bug+exercise+proper+form"
+"double-farmer-walk" = "https://www.youtube.com/results?search_query=double+kettlebell+farmer+walk+proper+form"
+"double-floor-press" = "https://www.youtube.com/results?search_query=double+kettlebell+floor+press+proper+form"
+"double-front-squat" = "https://www.youtube.com/results?search_query=double+kettlebell+front+squat+proper+form"
+"double-rdl" = "https://www.youtube.com/results?search_query=double+kettlebell+romanian+deadlift+proper+form"
 "goblet-squat" = "https://www.youtube.com/results?search_query=kettlebell+goblet+squat+proper+form"
-"halo" = "https://www.youtube.com/results?search_query=kettlebell+halo+proper+form"
-"high-pull" = "https://www.youtube.com/results?search_query=kettlebell+high+pull+proper+form"
-"hip-hinge" = "https://www.youtube.com/results?search_query=kettlebell+hip+hinge+proper+form"
+"gorilla-row" = "https://www.youtube.com/results?search_query=double+kettlebell+gorilla+row+proper+form"
 "hollow-hold" = "https://www.youtube.com/results?search_query=hollow+body+hold+proper+form"
-"one-arm-row" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+row+proper+form"
+"one-arm-row" = "https://www.youtube.com/watch?v=uQZZdGF16KQ"
+"plank-pull-through" = "https://www.youtube.com/results?search_query=kettlebell+plank+pull+through+proper+form"
 "push-up" = "https://www.youtube.com/results?search_query=push+up+proper+form"
-"renegade-row" = "https://www.youtube.com/results?search_query=kettlebell+renegade+row+proper+form"
 "reverse-lunge" = "https://www.youtube.com/results?search_query=kettlebell+reverse+lunge+proper+form"
-"side-plank" = "https://www.youtube.com/results?search_query=side+plank+proper+form"
+"single-leg-rdl" = "https://www.youtube.com/results?search_query=single+leg+kettlebell+romanian+deadlift+proper+form"
 "split-squat" = "https://www.youtube.com/results?search_query=kettlebell+split+squat+proper+form"
 "strict-press" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+strict+press+proper+form"
-"suitcase-carry" = "https://www.youtube.com/results?search_query=kettlebell+suitcase+carry+proper+form"
-"suitcase-deadlift" = "https://www.youtube.com/results?search_query=kettlebell+suitcase+deadlift+proper+form"
-"swing" = "https://www.youtube.com/results?search_query=kettlebell+swing+proper+form"
-"towel-curl" = "https://www.youtube.com/results?search_query=towel+biceps+curl+proper+form"
+"suitcase-march" = "https://www.youtube.com/results?search_query=kettlebell+suitcase+march+proper+form"
+"swing" = "https://www.youtube.com/results?search_query=StrongFirst+two+hand+kettlebell+swing+tutorial"
 
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
-description = "Weekday kettlebell-first lifting calendar with tight 6:30-7:30 AM sessions."
+description = "Weekday two-kettlebell workouts at 7:00 AM local: a 30-minute calendar block with a complete 45-minute menu."
 color = "#1f7a5c"
 
 [feeds.cardio]
 name = "Rowland Fitness - Cardio"
 filename = "cardio.ics"
-description = "Dedicated weekend endurance calendar."
+description = "Weekend endurance at 7:00 AM local: an easy long run Saturday and structured swim Sunday."
 color = "#c94f2d"
 
 [[events]]
 feed = "lifting"
 id = "upper-a"
-summary = "KB/Gym: Upper A + Easy Run"
+summary = "Two 35s: Upper Strength"
 day = "MO"
-start = "06:30"
-duration_minutes = 60
-sequence = 6
-location = "Apartment or gym"
-categories = ["FITNESS", "LIFTING", "UPPER"]
-kettlebell_movements = ["clean-press", "one-arm-row", "floor-press", "push-up", "suitcase-carry"]
+start = "07:00"
+duration_minutes = 30
+sequence = 7
+location = "Apartment"
+categories = ["FITNESS", "LIFTING", "KETTLEBELL", "UPPER"]
+kettlebell_movements = ["strict-press", "one-arm-row", "double-floor-press", "double-farmer-walk", "push-up", "plank-pull-through", "cable-rope-crunch"]
 description = """
-Stop at 7:30 even if unfinished.
-Default to the 35 lb kettlebell version. Use the gym version if you are already there.
+Calendar block: 7:00-7:30 local. Full menu: 45 minutes.
+Start at the top, keep transitions quick, and stop at 7:30. Unfinished work is optional, not debt.
 
-5 min warm-up:
-- Easy walk or bike, shoulder circles, band pull-aparts, 10 push-ups.
+0-5 min - Warm-up:
+- Shoulder circles, scapular push-ups, light rows, and 8 easy push-ups.
 
-30 min lift - Kettlebell:
-- Clean + press: 5 x 5 each side.
-- One-arm row: 4 x 8 each side.
-- Floor press: 4 x 10.
-- Push-up + suitcase carry: 3 rounds.
+5-17 min - Block A, 4 controlled rounds:
+- Single-arm strict press: 5-8 each side.
+- One-arm row: 8-12 each side.
+- Rest only as needed to keep the reps clean.
 
-30 min lift - Gym:
-- Bench press: 4 x 5-8.
-- Chest-supported row: 4 x 8.
-- Incline DB press: 3 x 8-10.
-- Pull-ups or lat pulldown: 3 x 8-10.
-- Lateral raise + triceps pressdown: 2 x 12 each if time.
+17-29 min - Block B, 3 rounds:
+- Double kettlebell floor press: 8-12. Use one bell if getting both into position is awkward.
+- Double farmer walk or march: 30-45 sec.
 
-30 min lift - No equipment:
-- Push-ups: 4 strong sets.
-- Pike push-ups: 3 x 8-12.
-- Prone swimmers: 3 x 12.
-- Chair dips: 3 x 10-15.
-- Plank: 3 x 45 sec.
+29-39 min - Block C, 3 rounds:
+- Push-ups: 8-20, stopping 1-2 clean reps before failure.
+- Kettlebell plank pull-through: 6 each side.
 
-After lift:
-- Easy treadmill run: 2 miles or 20 min cap, whichever comes first.
+39-45 min - Here's your abs:
+- Cable available: rope crunch, 3 hard sets x 8-15 with a slow return.
+- At home: plank pull-through, 3 x 6-10 each side.
 
-Here's your abs:
-- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
-- Last set: drop the weight 20-30% and rep out close to failure.
-- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
-- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
-
-Minimum version:
-- Warm-up, bench/push-up, row/pull, 10 min easy jog.
+Fixed-weight rule:
+- If 35 lb is too heavy overhead, use a push press or floor press. Never grind an ugly rep.
 """
 
 [[events]]
 feed = "lifting"
 id = "lower-a"
-summary = "KB/Gym: Lower A + Low-Impact Finish"
+summary = "Two 35s: Squat + Legs"
 day = "TU"
-start = "06:30"
-duration_minutes = 60
-sequence = 6
-location = "Apartment or gym"
-categories = ["FITNESS", "LIFTING", "LOWER"]
-kettlebell_movements = ["goblet-squat", "swing", "split-squat", "suitcase-deadlift", "calf-raise", "side-plank"]
+start = "07:00"
+duration_minutes = 30
+sequence = 7
+location = "Apartment"
+categories = ["FITNESS", "LIFTING", "KETTLEBELL", "LOWER"]
+kettlebell_movements = ["double-front-squat", "goblet-squat", "calf-raise", "reverse-lunge", "double-rdl", "swing", "dead-bug"]
 description = """
-Stop at 7:30 even if unfinished. No hard running after lower body.
-Default to the 35 lb kettlebell version. Use the gym version if you are already there.
+Calendar block: 7:00-7:30 local. Full menu: 45 minutes.
+Start at the top, keep transitions quick, and stop at 7:30. Unfinished work is optional, not debt.
 
-5 min warm-up:
-- Easy bike or walk, hip circles, bodyweight squats, glute bridges.
+0-5 min - Warm-up:
+- Hip circles, hinges, bodyweight squats, and glute bridges.
 
-30 min lift - Kettlebell:
-- Goblet squat: 4 x 10.
-- Kettlebell swing: 5 x 15.
-- Split squat: 3 x 8 each leg.
-- Suitcase deadlift: 3 x 10.
-- Calf raise + side plank: 2 rounds.
+5-17 min - Block A, 4 controlled rounds:
+- Double front squat: 5-8.
+- Calf raise holding both bells: 12-20.
+- If the double rack is not secure, use one goblet squat for 10-15.
 
-30 min lift - Gym:
-- Back squat: 4 x 5.
-- Romanian deadlift: 3 x 8.
-- Reverse lunge: 3 x 8 each leg.
-- Calf raise + plank: 2-3 rounds.
+17-29 min - Block B, 3 rounds:
+- Front-rack or goblet reverse lunge: 6-8 each leg.
+- Double kettlebell Romanian deadlift: 8-12.
 
-30 min lift - No equipment:
-- Split squat: 4 x 10 each leg.
-- Single-leg RDL reach: 3 x 10 each leg.
-- Glute bridge: 4 x 15.
-- Wall sit: 3 x 45 sec.
-- Calf raise + dead bug: 3 rounds.
+29-39 min - Block C, alternating every minute:
+- Minute 1: two-hand swings, 12-15 crisp reps.
+- Minute 2: dead bug, 8 each side.
+- Repeat for 5 rounds.
 
-Finish:
-- Pick one easy option for 8-12 min: incline walk, bike, row, sled, carries, or very light jump rope technique.
+39-45 min - Here's your abs:
+- Dead bug: 3 x 8 each side with a full exhale.
+- Or cable rope crunch: 3 hard sets x 8-15 if you are at the gym.
 
-Here's your abs:
-- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
-- Last set: drop the weight 20-30% and rep out close to failure.
-- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
-- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
-
-Minimum version:
-- Warm-up, squat pattern, hinge pattern, core.
+Fixed-weight rule:
+- Use the goblet version when two bells compromise rack position or squat depth. Substitute deadlifts for swings until the hinge feels automatic.
 """
 
 [[events]]
 feed = "lifting"
 id = "wednesday-choice"
-summary = "KB/Gym: Glory Muscles or Swim"
+summary = "Two 35s: Full-Body Conditioning"
 day = "WE"
-start = "06:30"
-duration_minutes = 60
-sequence = 6
-location = "Apartment, gym, or pool"
-categories = ["FITNESS", "CHOICE", "SWIM", "ACCESSORIES"]
-kettlebell_movements = ["towel-curl", "close-grip-push-up", "halo", "suitcase-carry", "calf-raise", "hollow-hold"]
+start = "07:00"
+duration_minutes = 30
+sequence = 7
+location = "Apartment"
+categories = ["FITNESS", "LIFTING", "KETTLEBELL", "FULL BODY"]
+kettlebell_movements = ["clean-push-press", "one-arm-row", "push-up", "double-farmer-walk", "swing", "hollow-hold", "calf-raise"]
 description = """
-Wednesday is a choice day. Keep it useful, not crushing.
-Stop at 7:30 even if unfinished.
-Default to the 35 lb kettlebell glory-muscles version. Swim if that is the better discipline today.
+Calendar block: 7:00-7:30 local. Full menu: 45 minutes.
+Start at the top, keep transitions quick, and stop at 7:30. This is the moderate day; stay crisp, not crushed.
 
-Option A - Kettlebell glory muscles:
-- Curl variation or towel curl: 3 x 12.
-- Close-grip push-up: 3 x 10-15.
-- Halo: 3 x 8 each way.
-- Suitcase carry: 4 short walks.
-- Calf raise + hollow hold: 3 rounds.
+0-5 min - Warm-up:
+- March in place, shoulder circles, hip hinges, and 8 easy push-ups.
 
-Option B - Gym glory muscles:
-- DB curl + rope pressdown: 3 x 10-12 each.
-- Lateral raise + rear delt fly: 3 x 12 each.
-- Hanging knee raise or cable crunch: 3 x 10-15.
-- Standing calf raise: 4 x 12.
-- 5 min mobility.
+5-17 min - Block A, 3 rounds:
+- Single-arm clean + push press: 4-6 each side.
+- One-arm row: 8 each side.
+- Use two hands to guide the bell down if needed.
 
-Option C - Swim 20:
-- 4 x 50 easy warm-up.
-- 4 x 50 drill: catch-up, fingertip drag, kick, choice.
-- 6 x 100 smooth, 20 sec rest.
-- 4 x 25 build, easy back.
+17-32 min - Block B, 5 rounds of a 3-minute rotation:
+- Minute 1: push-ups, 8-15.
+- Minute 2: double farmer walk or march, 40 sec.
+- Minute 3: two-hand swings, 12-15.
 
-Option D - No equipment:
-- Diamond push-ups: 3 strong sets.
-- Pike push-ups: 3 x 8-12.
-- Towel curls: 3 x 12.
-- Hollow hold + calf raise: 4 rounds.
-- Mobility: 5 min.
+32-40 min - Block C, 2-3 rounds:
+- Hollow hold: 20-30 sec.
+- Calf raise holding both bells: 15-20.
+- Easy walk or shakeout: 30 sec.
 
-Here's your abs:
-- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
-- Last set: drop the weight 20-30% and rep out close to failure.
-- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
-- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
+40-45 min - Here's your abs:
+- Hollow hold: 3 x 20-30 sec.
+- Or cable rope crunch: 3 hard sets x 8-15 if you are at the gym.
 
-Minimum version:
-- 20 min easy swim, walk, mobility, or core.
+Fixed-weight rule:
+- A 35 lb clean or press should feel controlled. Use a two-hand clean to the rack or switch to floor press if it does not.
 """
 
 [[events]]
 feed = "lifting"
 id = "upper-b"
-summary = "KB/Gym: Upper B + Easy Run"
+summary = "Two 35s: Hinge + Unilateral Legs"
 day = "TH"
-start = "06:30"
-duration_minutes = 60
-sequence = 6
-location = "Apartment or gym"
-categories = ["FITNESS", "LIFTING", "UPPER"]
-kettlebell_movements = ["strict-press", "renegade-row", "one-arm-row", "push-up", "high-pull", "farmer-carry"]
+start = "07:00"
+duration_minutes = 30
+sequence = 7
+location = "Apartment"
+categories = ["FITNESS", "LIFTING", "KETTLEBELL", "LOWER"]
+kettlebell_movements = ["double-rdl", "goblet-squat", "split-squat", "single-leg-rdl", "swing", "suitcase-march"]
 description = """
-Stop at 7:30 even if unfinished.
-Default to the 35 lb kettlebell version. Use the gym version if you are already there.
+Calendar block: 7:00-7:30 local. Full menu: 45 minutes.
+Start at the top, keep transitions quick, and stop at 7:30. Unfinished work is optional, not debt.
 
-5 min warm-up:
-- Easy walk or bike, shoulder circles, scap push-ups, light rows.
+0-5 min - Warm-up:
+- Hip hinges, reverse lunges, glute bridges, and bodyweight squats.
 
-30 min lift - Kettlebell:
-- Strict press: 5 x 5 each side.
-- Renegade row or one-arm row: 4 x 8 each side.
-- Push-up: 4 strong sets.
-- High pull: 3 x 10 each side.
-- Farmer carry: 3 short walks.
+5-17 min - Block A, 4 controlled rounds:
+- Double kettlebell Romanian deadlift: 8-10.
+- Paused goblet squat: 10 with a 2-sec pause at the bottom.
 
-30 min lift - Gym:
-- Overhead press: 4 x 5-8.
-- Pull-ups or lat pulldown: 4 x 6-10.
-- DB bench press: 3 x 10.
-- Seated cable row: 3 x 10.
-- Rear delt raise + hammer curl: 2 x 12 each if time.
+17-29 min - Block B, 3 rounds:
+- Split squat: 8 each leg.
+- Single-leg Romanian deadlift: 8 each leg, one bell in the opposite hand.
 
-30 min lift - No equipment:
-- Pike push-ups: 4 x 8-12.
-- Push-ups: 4 strong sets.
-- Doorframe/isometric row or prone row: 4 x 12.
-- Rear delt snow angels: 3 x 12.
-- Side plank: 3 x 30 sec each.
+29-39 min - Block C:
+- Every 2 minutes for 5 rounds: 12-15 crisp two-hand swings.
+- Walk and breathe for the rest of each 2-minute window.
 
-After lift:
-- Easy treadmill run: 2 miles or 20 min cap, whichever comes first.
+39-45 min - Here's your abs:
+- Heavy suitcase march: 3 x 30-45 sec each side.
+- Keep ribs stacked and do not lean away from the bell.
 
-Here's your abs:
-- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
-- Last set: drop the weight 20-30% and rep out close to failure.
-- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
-- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
-
-Minimum version:
-- Warm-up, press, pull, 10 min easy jog.
+Fixed-weight rule:
+- Slow the lowering or add the pause before adding reps. Stop swings when the snap or back position fades.
 """
 
 [[events]]
 feed = "lifting"
 id = "lower-b"
-summary = "KB/Gym: Lower B + Low-Impact Finish"
+summary = "Two 35s: Upper Volume + Carries"
 day = "FR"
-start = "06:30"
-duration_minutes = 60
-sequence = 6
-location = "Apartment or gym"
-categories = ["FITNESS", "LIFTING", "LOWER"]
-kettlebell_movements = ["suitcase-deadlift", "front-rack-squat", "swing", "reverse-lunge", "suitcase-carry"]
+start = "07:00"
+duration_minutes = 30
+sequence = 7
+location = "Apartment"
+categories = ["FITNESS", "LIFTING", "KETTLEBELL", "UPPER"]
+kettlebell_movements = ["double-floor-press", "gorilla-row", "push-up", "clean-push-press", "crush-curl", "close-grip-push-up", "double-farmer-walk", "cable-rope-crunch", "plank-pull-through"]
 description = """
-Stop at 7:30 even if unfinished. No hard running after lower body.
-Default to the 35 lb kettlebell version. Use the gym version if you are already there.
+Calendar block: 7:00-7:30 local. Full menu: 45 minutes.
+Start at the top, keep transitions quick, and stop at 7:30. Keep the legs fresh for Saturday's run.
 
-5 min warm-up:
-- Easy bike or walk, hamstring sweeps, hip airplanes, bodyweight lunges.
+0-5 min - Warm-up:
+- Shoulder circles, scapular push-ups, light rows, and 8 easy push-ups.
 
-30 min lift - Kettlebell:
-- Double or single KB deadlift: 4 x 8.
-- Front-rack squat: 4 x 8.
-- Swing: 5 x 12.
-- Reverse lunge: 3 x 8 each leg.
-- Suitcase carry: 3 short walks.
+5-17 min - Block A, 4 controlled rounds:
+- Double kettlebell floor press: 8-12.
+- Gorilla row: 6-10 each side.
 
-30 min lift - Gym:
-- Deadlift or trap bar deadlift: 4 x 3-5.
-- Front squat or leg press: 3 x 8.
-- Hamstring curl: 3 x 10.
-- Bulgarian split squat: 2 x 8 each leg.
-- Calf raise + dead bug: 2 rounds if time.
+17-29 min - Block B, 3 rounds:
+- Push-ups: 8-20, stopping 1-2 clean reps before failure.
+- Single-arm clean + push press: 5-8 each side.
 
-30 min lift - No equipment:
-- Single-leg glute bridge: 4 x 10 each leg.
-- Walking lunge: 4 x 12 each leg.
-- Hamstring walkout: 3 x 8.
-- Squat tempo reps: 3 x 15.
-- Calf raise + plank: 3 rounds.
+29-39 min - Block C, 3 rounds:
+- Kettlebell crush curl: 8-12.
+- Close-grip push-up: 8-15.
+- Double farmer walk or march: 30 sec.
 
-Finish:
-- Pick one easy option for 8-12 min: incline walk, bike, row, sled, carries, or mobility.
+39-45 min - Here's your abs:
+- Cable available: rope crunch, 3 hard sets x 8-15 with a slow return.
+- At home: plank pull-through, 3 x 6-10 each side.
 
-Here's your abs:
-- Default: cable rope crunch, 4-5 hard sets x 8-15. Go heavy, but keep it clean.
-- Last set: drop the weight 20-30% and rep out close to failure.
-- Cues: kneel, hips locked, ribs down to pelvis, hard exhale, 1-sec squeeze, slow return.
-- Or pick one: hanging leg raise/captain's chair 3-4 x 8-12; ab wheel rollout 3-4 x 6-12; cable wood chop/lift 3 x 10 each side; Pallof press 3 x 10-15 each side; weighted decline sit-up 3 x 8-12; suitcase carry 3-4 heavy walks; farmer carry 3-4 heavy walks.
-
-Minimum version:
-- Warm-up, hinge pattern, lunge pattern, core.
+Fixed-weight rule:
+- Use one bell for floor press or push press whenever two bells make setup or form sloppy. Leave 1-2 good reps in reserve.
 """
 
 [[events]]
@@ -312,24 +248,24 @@ feed = "cardio"
 id = "long-run"
 summary = "Run: Long Easy 4-6 mi"
 day = "SA"
-start = "06:30"
-duration_minutes = 90
-sequence = 2
+start = "07:00"
+duration_minutes = 60
+sequence = 3
 location = "Outside or treadmill"
 categories = ["FITNESS", "CARDIO", "RUN"]
 description = """
-Long run starts at 6:30 local time.
+One-hour calendar block starting at 7:00 local.
 
 Goal:
-- 4-6 miles easy, conversational pace.
-- Start near 4 miles. Hold 4-6 miles for the first few weeks before building.
-- No pace chasing. This is discipline and aerobic base.
+- Run 4-6 miles at an easy, conversational effort.
+- Choose the distance by recovery, not ego. Do not speed up just to force 6 miles into the hour.
+- Start near 4 miles and hold the range for several weeks before adding more.
 
 Simple progression:
 - Weeks 1-2: 4 miles.
-- Weeks 3-4: 5 miles.
-- Weeks 5+: 6 miles if recovering well.
-- Every fourth week: cut back to 4 miles.
+- Weeks 3-4: 5 miles if recovering well.
+- Weeks 5+: 6 miles if the weekday work and joints feel good.
+- Every fourth week: cut back to 4 easy miles.
 
 Minimum version:
 - 30 min easy run/walk.
@@ -338,50 +274,32 @@ Minimum version:
 [[events]]
 feed = "cardio"
 id = "long-swim"
-summary = "Swim or KB: Sunday"
+summary = "Swim: Structured 1,500"
 day = "SU"
-start = "06:30"
+start = "07:00"
 duration_minutes = 60
-sequence = 4
-location = "Pool or home"
-categories = ["FITNESS", "CARDIO", "SWIM", "KETTLEBELL"]
-kettlebell_reference_url = "https://www.youtube.com/watch?v=uQZZdGF16KQ"
-kettlebell_movements = ["halo", "hip-hinge", "goblet-squat", "swing", "clean-press", "reverse-lunge", "one-arm-row", "suitcase-carry"]
+sequence = 5
+location = "Pool"
+categories = ["FITNESS", "CARDIO", "SWIM"]
 description = """
-Sunday starts at 6:30 local time. Pick the swim if you have pool access; pick the 35 lb kettlebell workout if you are home, traveling, or just want to move today.
+One-hour calendar block starting at 7:00 local. Smooth and structured, not just wandering around the pool.
 
-Option A - Structured long swim:
-- Smooth and structured, not just wandering around the pool.
-
-Swim warm-up:
+Warm-up:
 - 200 easy.
-- 4 x 50 drill/build: catch-up, fingertip drag, kick, choice.
+- 4 x 50 drill: catch-up, fingertip drag, kick, choice.
 
-Swim main set:
-- Ladder: 100, 200, 300, 200, 100 with 20 sec rest.
-- 4 x 100 as 75 smooth + 25 strong, 20 sec rest.
+Main set:
+- 2 x 200 steady, 20 sec rest.
+- 4 x 100 as 75 smooth + 25 firm, 20 sec rest.
+- 4 x 50 build from easy to strong, 15-20 sec rest.
 
-Swim cool-down:
+Cool-down:
 - 100 easy.
 
-Swim total:
-- Full version: about 1,700.
-- Short version: stop after the ladder, about 1,100.
-
-Option B - 35 lb kettlebell workout:
-- 5 min warm-up: halos, hip hinges, prying goblet squats, shoulder circles.
-- 4-6 rounds, rest 60-90 sec between rounds:
-  - 15 two-hand swings.
-  - 8 goblet squats.
-  - 6 clean + press each side.
-  - 8 reverse lunges each side, goblet or rack hold.
-  - 10 one-arm rows each side.
-  - 30-45 sec suitcase carry each side.
-- Keep it crisp. If form slips, stop the round count there.
-
-KB minimum version:
-- 3 rounds: swings, goblet squats, clean + press, suitcase carry.
+Total:
+- Base set: 1,500.
+- If time and energy are good, add 4 x 100 pull for 1,900 total.
 
 Minimum version:
-- 20-30 min relaxed swim or 20 min kettlebell circuit. Keep moving, leave feeling better.
+- 20-30 min relaxed continuous swimming.
 """
