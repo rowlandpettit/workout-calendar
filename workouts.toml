@@ -302,31 +302,48 @@ Minimum version:
 [[events]]
 feed = "cardio"
 id = "long-swim"
-summary = "Swim: Structured Long Swim"
+summary = "Swim or KB: Sunday"
 day = "SU"
 start = "06:30"
 duration_minutes = 60
-sequence = 2
-location = "Pool"
-categories = ["FITNESS", "CARDIO", "SWIM"]
+sequence = 3
+location = "Pool or home"
+categories = ["FITNESS", "CARDIO", "SWIM", "KETTLEBELL"]
 description = """
-Long swim starts at 6:30 local time. Smooth, structured, not just wandering around the pool.
+Sunday starts at 6:30 local time. Pick the swim if you have pool access; pick the 35 lb kettlebell workout if you are home, traveling, or just want to move today.
 
-Warm-up:
+Option A - Structured long swim:
+- Smooth and structured, not just wandering around the pool.
+
+Swim warm-up:
 - 200 easy.
 - 4 x 50 drill/build: catch-up, fingertip drag, kick, choice.
 
-Main set:
+Swim main set:
 - Ladder: 100, 200, 300, 200, 100 with 20 sec rest.
 - 4 x 100 as 75 smooth + 25 strong, 20 sec rest.
 
-Cool-down:
+Swim cool-down:
 - 100 easy.
 
-Total:
+Swim total:
 - Full version: about 1,700.
 - Short version: stop after the ladder, about 1,100.
 
+Option B - 35 lb kettlebell workout:
+- 5 min warm-up: halos, hip hinges, prying goblet squats, shoulder circles.
+- 4-6 rounds, rest 60-90 sec between rounds:
+  - 15 two-hand swings.
+  - 8 goblet squats.
+  - 6 clean + press each side.
+  - 8 reverse lunges each side, goblet or rack hold.
+  - 10 one-arm rows each side.
+  - 30-45 sec suitcase carry each side.
+- Keep it crisp. If form slips, stop the round count there.
+
+KB minimum version:
+- 3 rounds: swings, goblet squats, clean + press, suitcase carry.
+
 Minimum version:
-- 20-30 min relaxed swim, keep moving, leave feeling better.
+- 20-30 min relaxed swim or 20 min kettlebell circuit. Keep moving, leave feeling better.
 """

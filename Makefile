@@ -1,4 +1,4 @@
-PYTHON := $(shell command -v python3.12 || command -v python3.11 || command -v python3)
+PYTHON := $(shell command -v python3.13 || command -v python3.12 || command -v python3.11 || command -v python3)
 
 .PHONY: generate validate
 
