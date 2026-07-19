@@ -39,7 +39,7 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1-Dyw9VvBLnzCFyju-YB5v7cMg6b
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
-description = "Weekday lifting calendar with tight 6:30-7:30 AM sessions."
+description = "Weekday kettlebell-first lifting calendar with tight 6:30-7:30 AM sessions."
 color = "#1f7a5c"
 
 [feeds.cardio]
@@ -51,19 +51,26 @@ color = "#c94f2d"
 [[events]]
 feed = "lifting"
 id = "upper-a"
-summary = "Lift: Upper A + Easy Run"
+summary = "KB/Gym: Upper A + Easy Run"
 day = "MO"
 start = "06:30"
 duration_minutes = 60
-sequence = 5
-location = "Gym or home"
+sequence = 6
+location = "Apartment or gym"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 kettlebell_movements = ["clean-press", "one-arm-row", "floor-press", "push-up", "suitcase-carry"]
 description = """
 Stop at 7:30 even if unfinished.
+Default to the 35 lb kettlebell version. Use the gym version if you are already there.
 
 5 min warm-up:
 - Easy walk or bike, shoulder circles, band pull-aparts, 10 push-ups.
+
+30 min lift - Kettlebell:
+- Clean + press: 5 x 5 each side.
+- One-arm row: 4 x 8 each side.
+- Floor press: 4 x 10.
+- Push-up + suitcase carry: 3 rounds.
 
 30 min lift - Gym:
 - Bench press: 4 x 5-8.
@@ -71,12 +78,6 @@ Stop at 7:30 even if unfinished.
 - Incline DB press: 3 x 8-10.
 - Pull-ups or lat pulldown: 3 x 8-10.
 - Lateral raise + triceps pressdown: 2 x 12 each if time.
-
-30 min lift - Kettlebell:
-- Clean + press: 5 x 5 each side.
-- One-arm row: 4 x 8 each side.
-- Floor press: 4 x 10.
-- Push-up + suitcase carry: 3 rounds.
 
 30 min lift - No equipment:
 - Push-ups: 4 strong sets.
@@ -101,25 +102,20 @@ Minimum version:
 [[events]]
 feed = "lifting"
 id = "lower-a"
-summary = "Lift: Lower A + Low-Impact Finish"
+summary = "KB/Gym: Lower A + Low-Impact Finish"
 day = "TU"
 start = "06:30"
 duration_minutes = 60
-sequence = 5
-location = "Gym or home"
+sequence = 6
+location = "Apartment or gym"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 kettlebell_movements = ["goblet-squat", "swing", "split-squat", "suitcase-deadlift", "calf-raise", "side-plank"]
 description = """
 Stop at 7:30 even if unfinished. No hard running after lower body.
+Default to the 35 lb kettlebell version. Use the gym version if you are already there.
 
 5 min warm-up:
 - Easy bike or walk, hip circles, bodyweight squats, glute bridges.
-
-30 min lift - Gym:
-- Back squat: 4 x 5.
-- Romanian deadlift: 3 x 8.
-- Reverse lunge: 3 x 8 each leg.
-- Calf raise + plank: 2-3 rounds.
 
 30 min lift - Kettlebell:
 - Goblet squat: 4 x 10.
@@ -127,6 +123,12 @@ Stop at 7:30 even if unfinished. No hard running after lower body.
 - Split squat: 3 x 8 each leg.
 - Suitcase deadlift: 3 x 10.
 - Calf raise + side plank: 2 rounds.
+
+30 min lift - Gym:
+- Back squat: 4 x 5.
+- Romanian deadlift: 3 x 8.
+- Reverse lunge: 3 x 8 each leg.
+- Calf raise + plank: 2-3 rounds.
 
 30 min lift - No equipment:
 - Split squat: 4 x 10 each leg.
@@ -151,39 +153,40 @@ Minimum version:
 [[events]]
 feed = "lifting"
 id = "wednesday-choice"
-summary = "Choice: Swim 20 or Glory Muscles"
+summary = "KB/Gym: Glory Muscles or Swim"
 day = "WE"
 start = "06:30"
 duration_minutes = 60
-sequence = 5
-location = "Pool, gym, or home"
+sequence = 6
+location = "Apartment, gym, or pool"
 categories = ["FITNESS", "CHOICE", "SWIM", "ACCESSORIES"]
 kettlebell_movements = ["towel-curl", "close-grip-push-up", "halo", "suitcase-carry", "calf-raise", "hollow-hold"]
 description = """
 Wednesday is a choice day. Keep it useful, not crushing.
 Stop at 7:30 even if unfinished.
+Default to the 35 lb kettlebell glory-muscles version. Swim if that is the better discipline today.
 
-Option A - Swim 20:
-- 4 x 50 easy warm-up.
-- 4 x 50 drill: catch-up, fingertip drag, kick, choice.
-- 6 x 100 smooth, 20 sec rest.
-- 4 x 25 build, easy back.
-
-Option B - Glory Muscles - Gym:
-- DB curl + rope pressdown: 3 x 10-12 each.
-- Lateral raise + rear delt fly: 3 x 12 each.
-- Hanging knee raise or cable crunch: 3 x 10-15.
-- Standing calf raise: 4 x 12.
-- 5 min mobility.
-
-Option B - Kettlebell:
+Option A - Kettlebell glory muscles:
 - Curl variation or towel curl: 3 x 12.
 - Close-grip push-up: 3 x 10-15.
 - Halo: 3 x 8 each way.
 - Suitcase carry: 4 short walks.
 - Calf raise + hollow hold: 3 rounds.
 
-Option B - No equipment:
+Option B - Gym glory muscles:
+- DB curl + rope pressdown: 3 x 10-12 each.
+- Lateral raise + rear delt fly: 3 x 12 each.
+- Hanging knee raise or cable crunch: 3 x 10-15.
+- Standing calf raise: 4 x 12.
+- 5 min mobility.
+
+Option C - Swim 20:
+- 4 x 50 easy warm-up.
+- 4 x 50 drill: catch-up, fingertip drag, kick, choice.
+- 6 x 100 smooth, 20 sec rest.
+- 4 x 25 build, easy back.
+
+Option D - No equipment:
 - Diamond push-ups: 3 strong sets.
 - Pike push-ups: 3 x 8-12.
 - Towel curls: 3 x 12.
@@ -203,26 +206,20 @@ Minimum version:
 [[events]]
 feed = "lifting"
 id = "upper-b"
-summary = "Lift: Upper B + Easy Run"
+summary = "KB/Gym: Upper B + Easy Run"
 day = "TH"
 start = "06:30"
 duration_minutes = 60
-sequence = 5
-location = "Gym or home"
+sequence = 6
+location = "Apartment or gym"
 categories = ["FITNESS", "LIFTING", "UPPER"]
 kettlebell_movements = ["strict-press", "renegade-row", "one-arm-row", "push-up", "high-pull", "farmer-carry"]
 description = """
 Stop at 7:30 even if unfinished.
+Default to the 35 lb kettlebell version. Use the gym version if you are already there.
 
 5 min warm-up:
 - Easy walk or bike, shoulder circles, scap push-ups, light rows.
-
-30 min lift - Gym:
-- Overhead press: 4 x 5-8.
-- Pull-ups or lat pulldown: 4 x 6-10.
-- DB bench press: 3 x 10.
-- Seated cable row: 3 x 10.
-- Rear delt raise + hammer curl: 2 x 12 each if time.
 
 30 min lift - Kettlebell:
 - Strict press: 5 x 5 each side.
@@ -230,6 +227,13 @@ Stop at 7:30 even if unfinished.
 - Push-up: 4 strong sets.
 - High pull: 3 x 10 each side.
 - Farmer carry: 3 short walks.
+
+30 min lift - Gym:
+- Overhead press: 4 x 5-8.
+- Pull-ups or lat pulldown: 4 x 6-10.
+- DB bench press: 3 x 10.
+- Seated cable row: 3 x 10.
+- Rear delt raise + hammer curl: 2 x 12 each if time.
 
 30 min lift - No equipment:
 - Pike push-ups: 4 x 8-12.
@@ -254,26 +258,20 @@ Minimum version:
 [[events]]
 feed = "lifting"
 id = "lower-b"
-summary = "Lift: Lower B + Low-Impact Finish"
+summary = "KB/Gym: Lower B + Low-Impact Finish"
 day = "FR"
 start = "06:30"
 duration_minutes = 60
-sequence = 5
-location = "Gym or home"
+sequence = 6
+location = "Apartment or gym"
 categories = ["FITNESS", "LIFTING", "LOWER"]
 kettlebell_movements = ["suitcase-deadlift", "front-rack-squat", "swing", "reverse-lunge", "suitcase-carry"]
 description = """
 Stop at 7:30 even if unfinished. No hard running after lower body.
+Default to the 35 lb kettlebell version. Use the gym version if you are already there.
 
 5 min warm-up:
 - Easy bike or walk, hamstring sweeps, hip airplanes, bodyweight lunges.
-
-30 min lift - Gym:
-- Deadlift or trap bar deadlift: 4 x 3-5.
-- Front squat or leg press: 3 x 8.
-- Hamstring curl: 3 x 10.
-- Bulgarian split squat: 2 x 8 each leg.
-- Calf raise + dead bug: 2 rounds if time.
 
 30 min lift - Kettlebell:
 - Double or single KB deadlift: 4 x 8.
@@ -281,6 +279,13 @@ Stop at 7:30 even if unfinished. No hard running after lower body.
 - Swing: 5 x 12.
 - Reverse lunge: 3 x 8 each leg.
 - Suitcase carry: 3 short walks.
+
+30 min lift - Gym:
+- Deadlift or trap bar deadlift: 4 x 3-5.
+- Front squat or leg press: 3 x 8.
+- Hamstring curl: 3 x 10.
+- Bulgarian split squat: 2 x 8 each leg.
+- Calf raise + dead bug: 2 rounds if time.
 
 30 min lift - No equipment:
 - Single-leg glute bridge: 4 x 10 each leg.
