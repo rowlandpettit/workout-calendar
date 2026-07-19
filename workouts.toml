@@ -10,6 +10,32 @@ sequence = 0
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3cKO0uLMo1UWAcH5WPHzpDcg/viewform?usp=publish-editor"
 sheet_url = "https://docs.google.com/spreadsheets/d/1-Dyw9VvBLnzCFyju-YB5v7cMg6bcTbsiG7LIU2CSAW8/edit?resourcekey=&gid=1366017611#gid=1366017611"
 
+[movement_links]
+"ab-wheel-rollout" = "https://www.youtube.com/results?search_query=ab+wheel+rollout+proper+form"
+"cable-rope-crunch" = "https://www.youtube.com/results?search_query=cable+rope+crunch+proper+form"
+"calf-raise" = "https://www.youtube.com/results?search_query=standing+calf+raise+proper+form"
+"clean-press" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+clean+and+press+proper+form"
+"close-grip-push-up" = "https://www.youtube.com/results?search_query=close+grip+push+up+proper+form"
+"farmer-carry" = "https://www.youtube.com/results?search_query=kettlebell+farmer+carry+proper+form"
+"floor-press" = "https://www.youtube.com/results?search_query=kettlebell+floor+press+proper+form"
+"front-rack-squat" = "https://www.youtube.com/results?search_query=kettlebell+front+rack+squat+proper+form"
+"goblet-squat" = "https://www.youtube.com/results?search_query=kettlebell+goblet+squat+proper+form"
+"halo" = "https://www.youtube.com/results?search_query=kettlebell+halo+proper+form"
+"high-pull" = "https://www.youtube.com/results?search_query=kettlebell+high+pull+proper+form"
+"hip-hinge" = "https://www.youtube.com/results?search_query=kettlebell+hip+hinge+proper+form"
+"hollow-hold" = "https://www.youtube.com/results?search_query=hollow+body+hold+proper+form"
+"one-arm-row" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+row+proper+form"
+"push-up" = "https://www.youtube.com/results?search_query=push+up+proper+form"
+"renegade-row" = "https://www.youtube.com/results?search_query=kettlebell+renegade+row+proper+form"
+"reverse-lunge" = "https://www.youtube.com/results?search_query=kettlebell+reverse+lunge+proper+form"
+"side-plank" = "https://www.youtube.com/results?search_query=side+plank+proper+form"
+"split-squat" = "https://www.youtube.com/results?search_query=kettlebell+split+squat+proper+form"
+"strict-press" = "https://www.youtube.com/results?search_query=single+arm+kettlebell+strict+press+proper+form"
+"suitcase-carry" = "https://www.youtube.com/results?search_query=kettlebell+suitcase+carry+proper+form"
+"suitcase-deadlift" = "https://www.youtube.com/results?search_query=kettlebell+suitcase+deadlift+proper+form"
+"swing" = "https://www.youtube.com/results?search_query=kettlebell+swing+proper+form"
+"towel-curl" = "https://www.youtube.com/results?search_query=towel+biceps+curl+proper+form"
+
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
@@ -29,9 +55,10 @@ summary = "Lift: Upper A + Easy Run"
 day = "MO"
 start = "06:30"
 duration_minutes = 60
-sequence = 4
+sequence = 5
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
+kettlebell_movements = ["clean-press", "one-arm-row", "floor-press", "push-up", "suitcase-carry"]
 description = """
 Stop at 7:30 even if unfinished.
 
@@ -78,9 +105,10 @@ summary = "Lift: Lower A + Low-Impact Finish"
 day = "TU"
 start = "06:30"
 duration_minutes = 60
-sequence = 4
+sequence = 5
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
+kettlebell_movements = ["goblet-squat", "swing", "split-squat", "suitcase-deadlift", "calf-raise", "side-plank"]
 description = """
 Stop at 7:30 even if unfinished. No hard running after lower body.
 
@@ -127,9 +155,10 @@ summary = "Choice: Swim 20 or Glory Muscles"
 day = "WE"
 start = "06:30"
 duration_minutes = 60
-sequence = 4
+sequence = 5
 location = "Pool, gym, or home"
 categories = ["FITNESS", "CHOICE", "SWIM", "ACCESSORIES"]
+kettlebell_movements = ["towel-curl", "close-grip-push-up", "halo", "suitcase-carry", "calf-raise", "hollow-hold"]
 description = """
 Wednesday is a choice day. Keep it useful, not crushing.
 Stop at 7:30 even if unfinished.
@@ -178,9 +207,10 @@ summary = "Lift: Upper B + Easy Run"
 day = "TH"
 start = "06:30"
 duration_minutes = 60
-sequence = 4
+sequence = 5
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "UPPER"]
+kettlebell_movements = ["strict-press", "renegade-row", "one-arm-row", "push-up", "high-pull", "farmer-carry"]
 description = """
 Stop at 7:30 even if unfinished.
 
@@ -228,9 +258,10 @@ summary = "Lift: Lower B + Low-Impact Finish"
 day = "FR"
 start = "06:30"
 duration_minutes = 60
-sequence = 4
+sequence = 5
 location = "Gym or home"
 categories = ["FITNESS", "LIFTING", "LOWER"]
+kettlebell_movements = ["suitcase-deadlift", "front-rack-squat", "swing", "reverse-lunge", "suitcase-carry"]
 description = """
 Stop at 7:30 even if unfinished. No hard running after lower body.
 
@@ -306,9 +337,11 @@ summary = "Swim or KB: Sunday"
 day = "SU"
 start = "06:30"
 duration_minutes = 60
-sequence = 3
+sequence = 4
 location = "Pool or home"
 categories = ["FITNESS", "CARDIO", "SWIM", "KETTLEBELL"]
+kettlebell_reference_url = "https://www.youtube.com/watch?v=uQZZdGF16KQ"
+kettlebell_movements = ["halo", "hip-hinge", "goblet-squat", "swing", "clean-press", "reverse-lunge", "one-arm-row", "suitcase-carry"]
 description = """
 Sunday starts at 6:30 local time. Pick the swim if you have pool access; pick the 35 lb kettlebell workout if you are home, traveling, or just want to move today.
 

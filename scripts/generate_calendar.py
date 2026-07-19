@@ -149,6 +149,7 @@ def event_lines(
     settings: Settings,
     dtstamp: str,
     log_form_url: str,
+    movement_links: dict[str, str],
 ) -> list[str]:
     event_id = slug(event["id"])
     event_date = first_occurrence(settings.start_date, event["day"])
@@ -166,6 +167,23 @@ def event_lines(
     uid = f"{feed_id}-{event_id}@{settings.namespace}"
 
     description = event["description"].strip()
+
+    kettlebell_movements = event.get("kettlebell_movements", [])
+    if event.get("kettlebell_reference_url"):
+        description = (
+            f"{description}\n\nKettlebell workout reference:\n"
+            f"{event['kettlebell_reference_url']}"
+        )
+    if kettlebell_movements:
+        link_lines = []
+        for movement_id in kettlebell_movements:
+            movement_url = movement_links.get(movement_id)
+            if movement_url:
+                movement_name = movement_id.replace("-", " ").title()
+                link_lines.append(f"- {movement_name}: {movement_url}")
+        if link_lines:
+            description = f"{description}\n\nKettlebell demo links:\n" + "\n".join(link_lines)
+
     if event.get("log_link", True):
         form_url = event.get("form_url") or log_form_url
         if form_url:
@@ -201,7 +219,9 @@ def calendar_lines(
     settings: Settings,
     dtstamp: str,
     log_form_url: str = "",
+    movement_links: dict[str, str] | None = None,
 ) -> list[str]:
+    movement_links = movement_links or {}
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -224,7 +244,7 @@ def calendar_lines(
         lines.extend(vtimezone(settings.timezone_name))
 
     for event in events:
-        lines.extend(event_lines(event, feed_id, settings, dtstamp, log_form_url))
+        lines.extend(event_lines(event, feed_id, settings, dtstamp, log_form_url, movement_links))
 
     lines.append("END:VCALENDAR")
     return lines
@@ -302,6 +322,7 @@ def generate(root: Path) -> None:
     events = plan.get("events", [])
     logging = plan.get("logging", {})
     log_form_url = logging.get("form_url", "")
+    movement_links = plan.get("movement_links", {})
     dtstamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
     by_feed = {feed_id: [] for feed_id in feeds}
@@ -317,6 +338,7 @@ def generate(root: Path) -> None:
             settings=settings,
             dtstamp=dtstamp,
             log_form_url=log_form_url,
+            movement_links=movement_links,
         )
         write_calendar(public_dir / feed["filename"], lines)
 
@@ -333,6 +355,7 @@ def generate(root: Path) -> None:
         settings=settings,
         dtstamp=dtstamp,
         log_form_url=log_form_url,
+        movement_links=movement_links,
     )
     write_calendar(public_dir / all_feed["filename"], all_lines)
 
