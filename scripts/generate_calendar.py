@@ -345,7 +345,7 @@ def generate(root: Path) -> None:
     all_feed = {
         "name": "Rowland Fitness - All Workouts",
         "filename": "workouts.ics",
-        "description": "Combined lifting and cardio workout calendar.",
+        "description": "Weekday gym sessions at 7:00 AM local: one easy mile, 30 minutes of lifting, then sauna.",
         "color": "#2f5d8c",
     }
     all_lines = calendar_lines(
@@ -359,7 +359,9 @@ def generate(root: Path) -> None:
     )
     write_calendar(public_dir / all_feed["filename"], all_lines)
 
-    all_feeds = dict(feeds)
+    all_feeds = {
+        feed_id: feed for feed_id, feed in feeds.items() if by_feed.get(feed_id)
+    }
     all_feeds["all"] = all_feed
     write_index(public_dir, all_feeds, settings)
 

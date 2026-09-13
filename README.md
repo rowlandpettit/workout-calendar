@@ -4,15 +4,16 @@ Subscribed workout calendars generated from one editable source file.
 
 ## Live Feeds
 
-After GitHub Pages deploys, subscribe to these URLs in Apple Calendar:
+The weekly plan is Monday chest, Tuesday back, Wednesday legs, Thursday arms, and Friday shoulders. Each day has one 7:00-8:00 AM gym block: an easy mile, 30 minutes of lifting, then an optional 10-minute sauna. These are local floating times, so the event stays at 7:00 AM when you travel and your calendar changes time zone. Start with manageable weights and keep 2-3 reps in reserve while getting back into the routine.
+
+Subscribe to one of these URLs in Apple Calendar:
 
 - Lifting: `webcal://rowlandpettit.com/workout-calendar/lifting.ics`
-- Cardio: `webcal://rowlandpettit.com/workout-calendar/cardio.ics`
 - Combined: `webcal://rowlandpettit.com/workout-calendar/workouts.ics`
 
-Use either the separate lifting/cardio feeds or the combined feed, not both, unless you want duplicate events.
+Both active feeds contain the same five workouts, so subscribe to only one. The old cardio feed remains published empty to clear its former weekend run and swim events for existing subscribers.
 
-Workout times are generated as floating local times. A `7:00 AM` workout should stay at `7:00 AM` wherever the calendar is being viewed, instead of converting from Eastern time. Weekday events reserve `7:00-7:30 AM`, while their notes contain an optional full 45-minute menu. Weekend events reserve `7:00-8:00 AM`.
+The hour is a target; a slower mile, transitions, or a shower can run beyond 8:00. Skip the sauna if you feel dizzy, ill, or dehydrated, and rehydrate afterward.
 
 Each event includes a `Log workout` link to the Google Form. Responses land in the linked `Workout Log (Responses)` Google Sheet.
 
@@ -37,7 +38,7 @@ make generate
 Generated feeds are written to `public/`:
 
 - `public/lifting.ics`
-- `public/cardio.ics`
+- `public/cardio.ics` (retired, empty)
 - `public/workouts.ics`
 
 The generated files are not tracked in git. GitHub Actions regenerates them on every push and deploys `public/` as the live subscribed-calendar site.
