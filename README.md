@@ -4,7 +4,7 @@ Subscribed workout calendars generated from one editable source file.
 
 ## Live Feeds
 
-The weekly plan is Monday chest, Tuesday back, Wednesday legs, Thursday arms, and Friday shoulders. Each day has one 7:00-8:00 AM gym block: an easy mile, 30 minutes of lifting, then an optional 10-minute sauna. These are local floating times, so the event stays at 7:00 AM when you travel and your calendar changes time zone. Start with manageable weights and keep 2-3 reps in reserve while getting back into the routine.
+The weekly plan is Monday chest, Tuesday back, Wednesday legs, Thursday arms, and Friday shoulders. Wake at 6:00 AM. Each 6:15-7:00 AM gym block has an easy mile, about 17 minutes of lifting, and an optional 15-minute sauna. Head upstairs to shower afterward. Each event lists gym exercises and kettlebell swaps. These are local floating times, so the event stays at 6:15 AM when you travel and your calendar changes time zone. Start with manageable weights and keep 2-3 reps in reserve while getting back into the routine.
 
 Subscribe to one of these URLs in Apple Calendar:
 
@@ -13,7 +13,7 @@ Subscribe to one of these URLs in Apple Calendar:
 
 Both active feeds contain the same five workouts, so subscribe to only one. The old cardio feed remains published empty to clear its former weekend run and swim events for existing subscribers.
 
-The hour is a target; a slower mile, transitions, or a shower can run beyond 8:00. Skip the sauna if you feel dizzy, ill, or dehydrated, and rehydrate afterward.
+The 45-minute block is tight. If the mile takes longer than 12 minutes, trim a lifting set instead of speeding up. The sauna depends on it being warm and available; skip it if you feel dizzy, ill, or dehydrated, and rehydrate afterward.
 
 Each event includes a `Log workout` link to the Google Form. Responses land in the linked `Workout Log (Responses)` Google Sheet.
 

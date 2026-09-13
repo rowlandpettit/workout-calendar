@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the published feeds preserve the weekday 7 AM floating schedule."""
+"""Check the published feeds preserve the weekday 6:15 AM floating schedule."""
 
 from __future__ import annotations
 
@@ -53,10 +53,16 @@ def main() -> None:
             assert start.date() == date(2026, 9, 14) + timedelta(days=day), (
                 f"{filename}: wrong first occurrence"
             )
-            assert start.hour == 7 and start.minute == 0, f"{filename}: not 7 AM"
-            assert end - start == timedelta(hours=1), f"{filename}: not one hour"
+            assert start.hour == 6 and start.minute == 15, f"{filename}: not 6:15 AM"
+            assert end - start == timedelta(minutes=45), f"{filename}: not 45 minutes"
             assert SPLIT[day] in event["SUMMARY"], f"{filename}: wrong split day"
             assert event["RRULE"] == "FREQ=WEEKLY", f"{filename}: not recurring"
+            assert "Kettlebell swaps:" in event["DESCRIPTION"], (
+                f"{filename}: missing kettlebell alternatives"
+            )
+            assert "6:45-7:00: Sauna" in event["DESCRIPTION"], (
+                f"{filename}: missing 15-minute sauna"
+            )
             assert event["UID"] not in uids, f"{filename}: duplicate UID"
             days.add(day)
             uids.add(event["UID"])

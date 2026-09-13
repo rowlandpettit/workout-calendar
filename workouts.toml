@@ -4,7 +4,7 @@ timezone = "America/New_York"
 floating_times = true
 namespace = "workout-calendar.rowlandpettit"
 site_url = "https://rowlandpettit.com/workout-calendar"
-sequence = 8
+sequence = 9
 
 [logging]
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3cKO0uLMo1UWAcH5WPHzpDcg/viewform?usp=publish-editor"
@@ -13,7 +13,7 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1-Dyw9VvBLnzCFyju-YB5v7cMg6b
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
-description = "Weekday gym sessions at 7:00 AM local: one easy mile, 30 minutes of lifting, then sauna."
+description = "Weekday gym sessions at 6:15 AM local: one easy mile, a short lift, then an optional 15-minute sauna."
 color = "#1f7a5c"
 
 [feeds.cardio]
@@ -27,21 +27,20 @@ feed = "lifting"
 id = "upper-a"
 summary = "Gym: Chest + Mile + Sauna"
 day = "MO"
-start = "07:00"
-duration_minutes = 60
+start = "06:15"
+duration_minutes = 45
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "CHEST"]
 description = """
-7:00-8:00 local gym block. Run one easy mile first, lift for 30 minutes, then sauna for about 10 minutes. Leave time to cool down and hydrate; shower time may extend the block.
-
-Chest lift:
-- Barbell or machine bench press: 3 x 6-10.
+6:15-6:27: Run one easy mile. Do not race the clock.
+6:27-6:44: Chest, with one light first set:
+- Bench or machine chest press: 3 x 6-10.
 - Incline dumbbell press: 2 x 8-12.
-- Cable fly: 2 x 12-15.
+Kettlebell swaps: double floor press 3 x 8-12; push-ups 2 x 8-15. Use one bell if two are awkward.
+6:44-6:45: Move to sauna.
+6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
 
-Warm up with one light bench set. Rest about 60-90 seconds. Keep 1-2 clean reps in reserve. Add a little weight only after all sets reach the top of their range.
-
-Sauna comes after lifting. Skip it if dizzy, ill, or dehydrated.
+Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
 """
 
 [[events]]
@@ -49,21 +48,20 @@ feed = "lifting"
 id = "lower-a"
 summary = "Gym: Back + Mile + Sauna"
 day = "TU"
-start = "07:00"
-duration_minutes = 60
+start = "06:15"
+duration_minutes = 45
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "BACK"]
 description = """
-7:00-8:00 local gym block. Run one easy mile first, lift for 30 minutes, then sauna for about 10 minutes. Leave time to cool down and hydrate; shower time may extend the block.
-
-Back lift:
+6:15-6:27: Run one easy mile. Do not race the clock.
+6:27-6:44: Back, with one light first set:
 - Lat pulldown or assisted pull-up: 3 x 8-12.
-- Chest-supported row: 3 x 8-12.
-- Cable row: 2 x 10-12.
+- Chest-supported row: 2 x 8-12.
+Kettlebell swaps: one-arm row 3 x 8-12 each side; gorilla row 2 x 8-10 each side.
+6:44-6:45: Move to sauna.
+6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
 
-Warm up with one light pulldown set. Rest about 60-90 seconds. Keep 1-2 clean reps in reserve. Add a little weight only after all sets reach the top of their range.
-
-Sauna comes after lifting. Skip it if dizzy, ill, or dehydrated.
+Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
 """
 
 [[events]]
@@ -71,21 +69,20 @@ feed = "lifting"
 id = "wednesday-choice"
 summary = "Gym: Legs + Mile + Sauna"
 day = "WE"
-start = "07:00"
-duration_minutes = 60
+start = "06:15"
+duration_minutes = 45
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "LEGS"]
 description = """
-7:00-8:00 local gym block. Run one easy mile first, lift for 30 minutes, then sauna for about 10 minutes. Leave time to cool down and hydrate; shower time may extend the block.
-
-Leg lift:
+6:15-6:27: Run one easy mile. Do not race the clock.
+6:27-6:44: Legs, with one light first set:
 - Leg press or squat: 3 x 8-10.
 - Dumbbell Romanian deadlift: 2 x 8-10.
-- Seated or lying leg curl: 2 x 10-15.
+Kettlebell swaps: goblet or double front squat 3 x 8-10; double kettlebell Romanian deadlift 2 x 8-12. Reverse lunges can replace squats.
+6:44-6:45: Move to sauna.
+6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
 
-Warm up with one light leg press or squat set. Rest about 60-90 seconds. Keep 1-2 clean reps in reserve. Add a little weight only after all sets reach the top of their range.
-
-Keep the mile easy on leg day. Sauna comes after lifting; skip it if dizzy, ill, or dehydrated.
+Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
 """
 
 [[events]]
@@ -93,22 +90,20 @@ feed = "lifting"
 id = "upper-b"
 summary = "Gym: Arms + Mile + Sauna"
 day = "TH"
-start = "07:00"
-duration_minutes = 60
+start = "06:15"
+duration_minutes = 45
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "ARMS"]
 description = """
-7:00-8:00 local gym block. Run one easy mile first, lift for 30 minutes, then sauna for about 10 minutes. Leave time to cool down and hydrate; shower time may extend the block.
+6:15-6:27: Run one easy mile. Do not race the clock.
+6:27-6:44: Arms, alternating for 3 rounds:
+- Cable curl: 10-12.
+- Rope triceps pressdown: 10-12.
+Kettlebell swaps: crush curl 3 x 8-12; close-grip push-up 3 x 8-15. Rest 45-60 seconds between rounds.
+6:44-6:45: Move to sauna.
+6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
 
-Arms lift, alternating biceps and triceps:
-- Cable curl: 3 x 10-12.
-- Rope triceps pressdown: 3 x 10-12.
-- Dumbbell hammer curl: 2 x 10-12.
-- Overhead cable triceps extension: 2 x 10-12.
-
-Alternate each curl with the following triceps move. Rest about 45-60 seconds between pairs. Keep 1-2 clean reps in reserve. Add a little weight only after all sets reach the top of their range.
-
-Sauna comes after lifting. Skip it if dizzy, ill, or dehydrated.
+Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
 """
 
 [[events]]
@@ -116,19 +111,18 @@ feed = "lifting"
 id = "lower-b"
 summary = "Gym: Shoulders + Mile + Sauna"
 day = "FR"
-start = "07:00"
-duration_minutes = 60
+start = "06:15"
+duration_minutes = 45
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "SHOULDERS"]
 description = """
-7:00-8:00 local gym block. Run one easy mile first, lift for 30 minutes, then sauna for about 10 minutes. Leave time to cool down and hydrate; shower time may extend the block.
-
-Shoulder lift:
+6:15-6:27: Run one easy mile. Do not race the clock.
+6:27-6:44: Shoulders, with one light first set:
 - Seated dumbbell or machine overhead press: 3 x 6-10.
-- Dumbbell lateral raise: 3 x 12-15.
-- Reverse pec deck or rear-delt fly: 2 x 12-15.
+- Dumbbell lateral raise: 2 x 12-15.
+Kettlebell swaps: single-arm strict press 3 x 6-8 each side, or push press if needed; double farmer walk or march 2 x 30-45 seconds.
+6:44-6:45: Move to sauna.
+6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
 
-Warm up with one light press set. Rest about 60-90 seconds. Keep 1-2 clean reps in reserve. Add a little weight only after all sets reach the top of their range.
-
-Sauna comes after lifting. Skip it if dizzy, ill, or dehydrated.
+Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
 """
