@@ -44,10 +44,10 @@ def validate_description(description: str, label: str) -> None:
         description,
     )
     assert notes.startswith("Weights\n"), f"{label}: notes should start with Weights"
-    assert "Progress each path separately:" in notes, (
-        f"{label}: missing independent progression"
-    )
-    assert "Week 4:" in notes, f"{label}: missing lighter-week instruction"
+    assert not any(text in notes for text in (
+        "Progress each path", "Crunches:", "Rest 2 min", "Week 4:",
+        "light on the first lift", "ramp-up sets",
+    )), f"{label}: explanatory notes remain"
     assert not re.search(r"\b\d{1,2}:\d{2}\b|\bsauna\b|\bmile\b|swaps", notes, re.I), (
         f"{label}: obsolete timed itinerary or swap-only notes"
     )
@@ -56,11 +56,9 @@ def validate_description(description: str, label: str) -> None:
         f"{label}: expected one block for each equipment path"
     )
     for index, heading in enumerate(headings):
-        end = headings[index + 1].start() if index + 1 < len(headings) else notes.index(
-            "Progress each path separately:"
-        )
+        end = headings[index + 1].start() if index + 1 < len(headings) else len(notes.split("\n\nLog workout:")[0])
         block = notes[heading.end():end]
-        assert "Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets." in block, (
+        assert "Warm-up: 1 x 15–20" in block, (
             f"{label}: {heading.group(1)} needs a separate warm-up prescription"
         )
         exercises = [
@@ -127,7 +125,7 @@ def main() -> None:
             )
             assert event["SUMMARY"] == SPLIT[day], f"{filename}: wrong workout title"
             assert event["RRULE"] == "FREQ=WEEKLY", f"{filename}: not recurring"
-            assert int(event["SEQUENCE"]) >= 12, f"{filename}: stale update sequence"
+            assert int(event["SEQUENCE"]) >= 13, f"{filename}: stale update sequence"
             assert "Pick one path. 30 min. Working sets:" not in event["DESCRIPTION"], (
                 f"{filename}: removed introductory header remains"
             )

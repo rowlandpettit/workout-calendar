@@ -4,7 +4,7 @@ timezone = "America/New_York"
 floating_times = true
 namespace = "workout-calendar.rowlandpettit"
 site_url = "https://rowlandpettit.com/workout-calendar"
-sequence = 12
+sequence = 13
 
 [logging]
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3cKO0uLMo1UWAcH5WPHzpDcg/viewform?usp=publish-editor"
@@ -33,30 +33,26 @@ location = "Gym"
 categories = ["FITNESS", "LIFTING", "CHEST"]
 description = """
 Weights
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Bench press — 4 x 4–6
 Incline DB press — 2 x 6–10
 Cable fly — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 DB bench or floor press — 4 x 6–8
 DB squeeze floor press — 2 x 8–12
 Push-up — 2 x 8–15
 DB weighted crunch — 2 x 8–12
 
 KB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 KB floor press — 4 x 6–8/side
 KB crush floor press — 2 x 8–12
 Push-up — 2 x 8–15
 KB weighted crunch — 2 x 8–12
 
-Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
-Rest 2 min on the first lift; 60–90 sec on the others.
-Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
@@ -70,30 +66,26 @@ location = "Gym"
 categories = ["FITNESS", "LIFTING", "BACK"]
 description = """
 Weights
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Barbell row — 4 x 5–8
 Lat pulldown — 2 x 6–10
 Barbell shrug — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 DB row — 4 x 6–8/side
 DB floor pullover — 2 x 8–12
 DB shrug — 2 x 10–15
 DB weighted crunch — 2 x 8–12
 
 KB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 KB row — 4 x 6–8/side
 KB floor pullover — 2 x 8–12
 KB shrug — 2 x 10–15
 KB weighted crunch — 2 x 8–12
 
-Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest.
-Rest 2 min on the first lift; 60–90 sec on the others.
-Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
@@ -107,30 +99,26 @@ location = "Gym"
 categories = ["FITNESS", "LIFTING", "LEGS"]
 description = """
 Weights
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Back squat — 4 x 4–6
 Barbell Romanian deadlift — 2 x 6–8
 Barbell reverse lunge — 2 x 8–10/leg
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 DB front squat — 4 x 6–8
 DB Romanian deadlift — 2 x 8–10
 DB reverse lunge — 2 x 8–10/leg
 DB weighted crunch — 2 x 8–12
 
 KB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Double KB front squat — 4 x 6–8
 Double KB Romanian deadlift — 2 x 8–10
 KB reverse lunge — 2 x 8–10/leg
 KB weighted crunch — 2 x 8–12
 
-Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest.
-Rest 2 min on the first lift; 60–90 sec on the others.
-Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
@@ -144,30 +132,26 @@ location = "Gym"
 categories = ["FITNESS", "LIFTING", "ARMS"]
 description = """
 Weights
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Close-grip bench press — 4 x 4–6
 Barbell curl — 2 x 8–12
 Rope triceps pressdown — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Close-grip DB floor press — 4 x 6–8
 DB hammer curl — 2 x 8–12
 DB floor triceps extension — 2 x 10–12
 DB weighted crunch — 2 x 8–12
 
 KB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Close-grip KB floor press — 4 x 6–8
 KB curl — 2 x 8–12/side
 KB floor triceps extension — 2 x 10–12
 KB weighted crunch — 2 x 8–12
 
-Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest.
-Rest 2 min on the first lift; 60–90 sec on the others.
-Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
@@ -181,30 +165,26 @@ location = "Gym"
 categories = ["FITNESS", "LIFTING", "SHOULDERS"]
 description = """
 Weights
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 Barbell overhead press — 4 x 4–6
 DB lateral raise — 2 x 10–15
 DB rear-delt fly — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 DB shoulder press — 4 x 6–8
 DB lateral raise — 2 x 10–15
 DB rear-delt fly — 2 x 10–15
 DB weighted crunch — 2 x 8–12
 
 KB only
-Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Warm-up: 1 x 15–20
 KB strict press — 4 x 6–8/side
 KB rear-delt row — 2 x 10–12/side
 KB suitcase march — 2 x 20–30 steps/side
 KB weighted crunch — 2 x 8–12
 
-Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest.
-Rest 2 min on the first lift; 60–90 sec on the others.
-Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
@@ -218,7 +198,7 @@ duration_minutes = 60
 location = ""
 categories = ["FITNESS", "CARDIO", "RUNNING"]
 log_link = false
-description = "Easy, conversational pace."
+description = ""
 
 [[events]]
 feed = "lifting"
@@ -231,4 +211,4 @@ duration_minutes = 30
 location = "Pool"
 categories = ["FITNESS", "CARDIO", "SWIMMING"]
 log_link = false
-description = "Easy laps. Rest as needed."
+description = ""
