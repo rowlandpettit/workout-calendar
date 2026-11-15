@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the 30-minute, choose-one-path workout feeds and subscription identity."""
+"""Check weekday lifting, weekend cardio, and stable subscription identities."""
 
 from __future__ import annotations
 
@@ -10,13 +10,15 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
-FILES = {"lifting.ics": 5, "cardio.ics": 0, "workouts.ics": 5}
+FILES = {"lifting.ics": 7, "cardio.ics": 0, "workouts.ics": 7}
 SPLIT = {
     0: "Chest",
     1: "Back",
     2: "Legs",
     3: "Arms",
     4: "Shoulders",
+    5: "Long Run",
+    6: "Swim",
 }
 EVENT_IDS = {
     0: "upper-a",
@@ -24,6 +26,8 @@ EVENT_IDS = {
     2: "wednesday-choice",
     3: "upper-b",
     4: "lower-b",
+    5: "saturday-long-run",
+    6: "sunday-swim",
 }
 PATHS = ("Weights", "DB only", "KB only")
 ABS_FINISHERS = {
@@ -34,10 +38,12 @@ ABS_FINISHERS = {
 
 
 def validate_description(description: str, label: str) -> None:
-    notes = description.replace(r"\n", "\n")
-    assert re.search(r"\b(?:pick|choose)\s+one\b", notes, re.I), (
-        f"{label}: missing choose-one instruction"
+    notes = re.sub(
+        r"\\([nN,;\\])",
+        lambda match: "\n" if match.group(1) in ("n", "N") else match.group(1),
+        description,
     )
+    assert notes.startswith("Weights\n"), f"{label}: notes should start with Weights"
     assert "Progress each path separately:" in notes, (
         f"{label}: missing independent progression"
     )
@@ -54,15 +60,25 @@ def validate_description(description: str, label: str) -> None:
             "Progress each path separately:"
         )
         block = notes[heading.end():end]
+        assert "Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets." in block, (
+            f"{label}: {heading.group(1)} needs a separate warm-up prescription"
+        )
         exercises = [
             line for line in block.splitlines()
-            if re.search(r"\b\d+\s*[x×]\s*\d+", line)
+            if not line.startswith("Warm-up:") and re.search(r"\b\d+\s*[x×]\s*\d+", line)
         ]
         assert len(exercises) == 4, (
             f"{label}: {heading.group(1)} needs three lifts and a weighted abs finisher"
         )
         assert ABS_FINISHERS[heading.group(1)] in exercises[-1], (
             f"{label}: {heading.group(1)} needs its weighted abs finisher last"
+        )
+        working_sets = [
+            int(re.search(r"\b(\d+)\s*[x×]\s*\d+", line).group(1))
+            for line in exercises
+        ]
+        assert working_sets == [4, 2, 2, 2], (
+            f"{label}: {heading.group(1)} needs four main-lift working sets and 2/2/2 accessories"
         )
 
 
@@ -96,16 +112,31 @@ def main() -> None:
             start = datetime.strptime(event["DTSTART"], "%Y%m%dT%H%M%S")
             end = datetime.strptime(event["DTEND"], "%Y%m%dT%H%M%S")
             day = start.weekday()
-            assert day in SPLIT, f"{filename}: weekend event"
-            assert start.date() == date(2026, 9, 14) + timedelta(days=day), (
+            assert day in SPLIT, f"{filename}: unexpected workout day"
+            first_date = (
+                date(2026, 9, 14) + timedelta(days=day)
+                if day < 5 else date(2026, 11, 21) + timedelta(days=day - 5)
+            )
+            assert start.date() == first_date, (
                 f"{filename}: wrong first occurrence"
             )
             assert start.hour == 6 and start.minute == 15, f"{filename}: not 6:15 AM"
-            assert end - start == timedelta(minutes=30), f"{filename}: not 30 minutes"
-            assert SPLIT[day] in event["SUMMARY"], f"{filename}: wrong split day"
+            minutes = 60 if day == 5 else 30
+            assert end - start == timedelta(minutes=minutes), (
+                f"{filename}: {SPLIT[day]} should be {minutes} minutes"
+            )
+            assert event["SUMMARY"] == SPLIT[day], f"{filename}: wrong workout title"
             assert event["RRULE"] == "FREQ=WEEKLY", f"{filename}: not recurring"
-            assert int(event["SEQUENCE"]) >= 10, f"{filename}: stale update sequence"
-            validate_description(event["DESCRIPTION"], f"{filename}: {event['SUMMARY']}")
+            assert int(event["SEQUENCE"]) >= 12, f"{filename}: stale update sequence"
+            assert "Pick one path. 30 min. Working sets:" not in event["DESCRIPTION"], (
+                f"{filename}: removed introductory header remains"
+            )
+            if day < 5:
+                validate_description(event["DESCRIPTION"], f"{filename}: {event['SUMMARY']}")
+            else:
+                assert "Log workout:" not in event["DESCRIPTION"], (
+                    f"{filename}: weekend event should not include the lifting log link"
+                )
             feed_id = "all" if filename == "workouts.ics" else "lifting"
             expected_uid = f"{feed_id}-{EVENT_IDS[day]}@workout-calendar.rowlandpettit"
             assert event["UID"] == expected_uid, f"{filename}: changed subscription UID"
@@ -113,7 +144,7 @@ def main() -> None:
             days.add(day)
             uids.add(event["UID"])
         if expected_count:
-            assert days == set(SPLIT), f"{filename}: missing weekday"
+            assert days == set(SPLIT), f"{filename}: missing workout day"
             active_feeds[filename] = {
                 event["DTSTART"]: {key: value for key, value in event.items() if key != "UID"}
                 for event in events

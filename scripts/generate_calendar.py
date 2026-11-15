@@ -152,7 +152,10 @@ def event_lines(
     movement_links: dict[str, str],
 ) -> list[str]:
     event_id = slug(event["id"])
-    event_date = first_occurrence(settings.start_date, event["day"])
+    anchor = event.get("start_date", settings.start_date)
+    if isinstance(anchor, str):
+        anchor = date.fromisoformat(anchor)
+    event_date = first_occurrence(anchor, event["day"])
     hour, minute = parse_time(event["start"])
     if settings.floating_times:
         start = datetime(event_date.year, event_date.month, event_date.day, hour, minute)
@@ -345,7 +348,7 @@ def generate(root: Path) -> None:
     all_feed = {
         "name": "Rowland Fitness - All Workouts",
         "filename": "workouts.ics",
-        "description": "30-minute weekday strength sessions. Choose one complete path: Weights, DB only, or KB only. Progress each path separately.",
+        "description": "Weekday strength with independent Weights, DB only, and KB only paths; Saturday long run; Sunday swim.",
         "color": "#2f5d8c",
     }
     all_lines = calendar_lines(

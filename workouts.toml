@@ -4,7 +4,7 @@ timezone = "America/New_York"
 floating_times = true
 namespace = "workout-calendar.rowlandpettit"
 site_url = "https://rowlandpettit.com/workout-calendar"
-sequence = 11
+sequence = 12
 
 [logging]
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3cKO0uLMo1UWAcH5WPHzpDcg/viewform?usp=publish-editor"
@@ -13,7 +13,7 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1-Dyw9VvBLnzCFyju-YB5v7cMg6b
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
-description = "30-minute weekday strength sessions. Choose one complete path: Weights, DB only, or KB only. Progress each path separately."
+description = "Weekday strength with independent Weights, DB only, and KB only paths; Saturday long run; Sunday swim."
 color = "#1f7a5c"
 
 [feeds.cardio]
@@ -32,29 +32,30 @@ duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "CHEST"]
 description = """
-Pick one path. 30 min. Working sets:
-
 Weights
-Bench press — 3 x 4–6
-Incline DB press — 3 x 6–10
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Bench press — 4 x 4–6
+Incline DB press — 2 x 6–10
 Cable fly — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-DB bench or floor press — 3 x 6–8
-DB squeeze floor press — 3 x 8–12
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+DB bench or floor press — 4 x 6–8
+DB squeeze floor press — 2 x 8–12
 Push-up — 2 x 8–15
 DB weighted crunch — 2 x 8–12
 
 KB only
-KB floor press — 3 x 6–8/side
-KB crush floor press — 3 x 8–12
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+KB floor press — 4 x 6–8/side
+KB crush floor press — 2 x 8–12
 Push-up — 2 x 8–15
 KB weighted crunch — 2 x 8–12
 
 Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
 Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
-Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Rest 2 min on the first lift; 60–90 sec on the others.
 Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
@@ -68,29 +69,30 @@ duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "BACK"]
 description = """
-Pick one path. 30 min. Working sets:
-
 Weights
-Barbell row — 3 x 5–8
-Lat pulldown — 3 x 6–10
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Barbell row — 4 x 5–8
+Lat pulldown — 2 x 6–10
 Barbell shrug — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-DB row — 3 x 6–8/side
-DB floor pullover — 3 x 8–12
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+DB row — 4 x 6–8/side
+DB floor pullover — 2 x 8–12
 DB shrug — 2 x 10–15
 DB weighted crunch — 2 x 8–12
 
 KB only
-KB row — 3 x 6–8/side
-KB floor pullover — 3 x 8–12
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+KB row — 4 x 6–8/side
+KB floor pullover — 2 x 8–12
 KB shrug — 2 x 10–15
 KB weighted crunch — 2 x 8–12
 
 Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
-Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Crunches: hold DB/KB at chest.
+Rest 2 min on the first lift; 60–90 sec on the others.
 Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
@@ -104,29 +106,30 @@ duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "LEGS"]
 description = """
-Pick one path. 30 min. Working sets:
-
 Weights
-Back squat — 3 x 4–6
-Barbell Romanian deadlift — 3 x 6–8
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Back squat — 4 x 4–6
+Barbell Romanian deadlift — 2 x 6–8
 Barbell reverse lunge — 2 x 8–10/leg
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-DB front squat — 3 x 6–8
-DB Romanian deadlift — 3 x 8–10
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+DB front squat — 4 x 6–8
+DB Romanian deadlift — 2 x 8–10
 DB reverse lunge — 2 x 8–10/leg
 DB weighted crunch — 2 x 8–12
 
 KB only
-Double KB front squat — 3 x 6–8
-Double KB Romanian deadlift — 3 x 8–10
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Double KB front squat — 4 x 6–8
+Double KB Romanian deadlift — 2 x 8–10
 KB reverse lunge — 2 x 8–10/leg
 KB weighted crunch — 2 x 8–12
 
 Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
-Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Crunches: hold DB/KB at chest.
+Rest 2 min on the first lift; 60–90 sec on the others.
 Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
@@ -140,29 +143,30 @@ duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "ARMS"]
 description = """
-Pick one path. 30 min. Working sets:
-
 Weights
-Barbell curl — 3 x 6–8
-Rope triceps pressdown — 3 x 8–12
-DB hammer curl — 2 x 10–12
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Close-grip bench press — 4 x 4–6
+Barbell curl — 2 x 8–12
+Rope triceps pressdown — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-DB hammer curl — 3 x 6–8
-DB floor triceps extension — 3 x 8–12
-DB supinated curl — 2 x 10–12
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Close-grip DB floor press — 4 x 6–8
+DB hammer curl — 2 x 8–12
+DB floor triceps extension — 2 x 10–12
 DB weighted crunch — 2 x 8–12
 
 KB only
-KB crush curl — 3 x 6–8
-KB floor triceps extension — 3 x 8–12
-KB curl — 2 x 10–12/side
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Close-grip KB floor press — 4 x 6–8
+KB curl — 2 x 8–12/side
+KB floor triceps extension — 2 x 10–12
 KB weighted crunch — 2 x 8–12
 
 Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
-Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Crunches: hold DB/KB at chest.
+Rest 2 min on the first lift; 60–90 sec on the others.
 Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
@@ -176,28 +180,55 @@ duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "SHOULDERS"]
 description = """
-Pick one path. 30 min. Working sets:
-
 Weights
-Barbell overhead press — 3 x 4–6
-DB lateral raise — 3 x 10–15
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+Barbell overhead press — 4 x 4–6
+DB lateral raise — 2 x 10–15
 DB rear-delt fly — 2 x 10–15
 Kneeling rope cable crunch — 2 x 8–12
 
 DB only
-DB shoulder press — 3 x 6–8
-DB lateral raise — 3 x 10–15
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+DB shoulder press — 4 x 6–8
+DB lateral raise — 2 x 10–15
 DB rear-delt fly — 2 x 10–15
 DB weighted crunch — 2 x 8–12
 
 KB only
-KB strict press — 3 x 6–8/side
-KB rear-delt row — 3 x 10–12/side
+Warm-up: 1 x 15–20 light on the first lift, then ramp-up sets.
+KB strict press — 4 x 6–8/side
+KB rear-delt row — 2 x 10–12/side
 KB suitcase march — 2 x 20–30 steps/side
 KB weighted crunch — 2 x 8–12
 
 Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
-Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
-Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Crunches: hold DB/KB at chest.
+Rest 2 min on the first lift; 60–90 sec on the others.
 Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
+
+[[events]]
+feed = "lifting"
+id = "saturday-long-run"
+start_date = "2026-11-16"
+summary = "Long Run"
+day = "SA"
+start = "06:15"
+duration_minutes = 60
+location = ""
+categories = ["FITNESS", "CARDIO", "RUNNING"]
+log_link = false
+description = "Easy, conversational pace."
+
+[[events]]
+feed = "lifting"
+id = "sunday-swim"
+start_date = "2026-11-16"
+summary = "Swim"
+day = "SU"
+start = "06:15"
+duration_minutes = 30
+location = "Pool"
+categories = ["FITNESS", "CARDIO", "SWIMMING"]
+log_link = false
+description = "Easy laps. Rest as needed."

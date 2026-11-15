@@ -1,19 +1,21 @@
 # Rowland Fitness Calendar
 
-Thirty-minute strength workouts published as subscribed calendars.
+Weekday strength, Saturday long run, and Sunday swim published as subscribed calendars.
 
 ## Weekly plan
 
 Monday chest, Tuesday back, Wednesday legs, Thursday arms, Friday shoulders.
-Events run 6:15–6:45 AM in local floating time, including when traveling.
+Weekday lifts run 6:15–6:45 AM. Saturday Long Run runs 6:15–7:15 AM beginning November 21, 2026; Sunday Swim runs 6:15–6:45 AM beginning November 22, 2026. All use local floating time, including when traveling.
 
-Each event contains three complete alternatives. Choose **one**:
+Each weekday event contains three complete alternatives. Choose **one**:
 
 - **Weights:** full gym, including barbell, bench, rack, dumbbells, and cables.
 - **DB only:** dumbbells and bodyweight; a bench is optional where a floor alternative is listed.
 - **KB only:** kettlebells and bodyweight; the leg session uses two bells.
 
-Each path has four exercises and ten working sets: 3 / 3 / 2 / 2.
+Each path has four exercises and ten working sets: 4 / 2 / 2 / 2.
+The first exercise in every path is a compound lift with four heavy working sets.
+Its warm-up is separate: one light set of 15–20 reps, followed by lighter ramp-up sets as needed.
 Weighted abs finish every path: kneeling rope cable crunches for Weights,
 and weighted crunches holding a dumbbell or kettlebell at the chest for DB/KB.
 
@@ -44,7 +46,7 @@ The old Duke program informed the compound lifts and lighter weeks; its historic
 prescribed weights are not used as present-day starting loads.
 
 The calendar supplies the progression rules; it does not automatically record loads
-or adjust the workout. Each event retains the existing Google Form logging link.
+or adjust the workout. Each weekday event retains the existing Google Form logging link.
 The form itself has not been changed by this calendar update.
 
 ## Subscribe
@@ -52,13 +54,15 @@ The form itself has not been changed by this calendar update.
 - Lifting: `webcal://rowlandpettit.com/workout-calendar/lifting.ics`
 - Combined: `webcal://rowlandpettit.com/workout-calendar/workouts.ics`
 
-Both active feeds contain the same five workouts. Subscribe to only one.
+Both active feeds contain the same seven workouts. Subscribe to only one.
+The existing lifting.ics URL also carries the weekend sessions so current subscribers receive the full week without changing subscriptions.
 The retired cardio feed stays published empty for existing subscribers.
 
 ## Edit and publish
 
 Edit `workouts.toml` for titles, days, start times, durations, or notes.
-Keep event IDs, feed IDs, namespace, and recurrence anchors stable so calendar
+New weekend events use per-event start_date anchors to avoid adding past sessions.
+Keep existing event IDs, feed IDs, namespace, and recurrence anchors stable so calendar
 clients update existing series. Increase `settings.sequence` when publishing edits.
 
 ```bash
