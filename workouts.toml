@@ -4,7 +4,7 @@ timezone = "America/New_York"
 floating_times = true
 namespace = "workout-calendar.rowlandpettit"
 site_url = "https://rowlandpettit.com/workout-calendar"
-sequence = 9
+sequence = 10
 
 [logging]
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3cKO0uLMo1UWAcH5WPHzpDcg/viewform?usp=publish-editor"
@@ -13,116 +13,191 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1-Dyw9VvBLnzCFyju-YB5v7cMg6b
 [feeds.lifting]
 name = "Rowland Fitness - Lifting"
 filename = "lifting.ics"
-description = "Weekday gym sessions at 6:15 AM local: one easy mile, a short lift, then an optional 15-minute sauna."
+description = "30-minute weekday strength sessions. Choose one complete path: Weights, DB only, or KB only. Progress each path separately."
 color = "#1f7a5c"
 
 [feeds.cardio]
 name = "Rowland Fitness - Cardio"
 filename = "cardio.ics"
-description = "Retired feed. The weekday mile is part of each gym session."
+description = "Retired feed. Subscribe to Lifting or All Workouts."
 color = "#c94f2d"
 
 [[events]]
 feed = "lifting"
 id = "upper-a"
-summary = "Gym: Chest + Mile + Sauna"
+summary = "Chest — Strength"
 day = "MO"
 start = "06:15"
-duration_minutes = 45
+duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "CHEST"]
 description = """
-6:15-6:27: Run one easy mile. Do not race the clock.
-6:27-6:44: Chest, with one light first set:
-- Bench or machine chest press: 3 x 6-10.
-- Incline dumbbell press: 2 x 8-12.
-Kettlebell swaps: double floor press 3 x 8-12; push-ups 2 x 8-15. Use one bell if two are awkward.
-6:44-6:45: Move to sauna.
-6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
+Pick one path. 30 min. Working sets:
 
-Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
+Weights
+Bench press — 3 x 4–6
+Incline DB press — 3 x 6–10
+Cable fly — 2 x 10–15
+Kneeling rope cable crunch — 2 x 8–12
+
+DB only
+DB bench or floor press — 3 x 6–8
+DB squeeze floor press — 3 x 8–12
+Push-up — 2 x 8–15
+DB weighted crunch — 2 x 8–12
+
+KB only
+KB floor press — 3 x 6–8/side
+KB crush floor press — 3 x 8–12
+Push-up — 2 x 8–15
+KB weighted crunch — 2 x 8–12
+
+Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
+Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
+Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
 feed = "lifting"
 id = "lower-a"
-summary = "Gym: Back + Mile + Sauna"
+summary = "Back — Strength"
 day = "TU"
 start = "06:15"
-duration_minutes = 45
+duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "BACK"]
 description = """
-6:15-6:27: Run one easy mile. Do not race the clock.
-6:27-6:44: Back, with one light first set:
-- Lat pulldown or assisted pull-up: 3 x 8-12.
-- Chest-supported row: 2 x 8-12.
-Kettlebell swaps: one-arm row 3 x 8-12 each side; gorilla row 2 x 8-10 each side.
-6:44-6:45: Move to sauna.
-6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
+Pick one path. 30 min. Working sets:
 
-Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
+Weights
+Barbell row — 3 x 5–8
+Lat pulldown — 3 x 6–10
+Barbell shrug — 2 x 10–15
+Kneeling rope cable crunch — 2 x 8–12
+
+DB only
+DB row — 3 x 6–8/side
+DB floor pullover — 3 x 8–12
+DB shrug — 2 x 10–15
+DB weighted crunch — 2 x 8–12
+
+KB only
+KB row — 3 x 6–8/side
+KB floor pullover — 3 x 8–12
+KB shrug — 2 x 10–15
+KB weighted crunch — 2 x 8–12
+
+Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
+Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
+Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
 feed = "lifting"
 id = "wednesday-choice"
-summary = "Gym: Legs + Mile + Sauna"
+summary = "Legs — Strength"
 day = "WE"
 start = "06:15"
-duration_minutes = 45
+duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "LEGS"]
 description = """
-6:15-6:27: Run one easy mile. Do not race the clock.
-6:27-6:44: Legs, with one light first set:
-- Leg press or squat: 3 x 8-10.
-- Dumbbell Romanian deadlift: 2 x 8-10.
-Kettlebell swaps: goblet or double front squat 3 x 8-10; double kettlebell Romanian deadlift 2 x 8-12. Reverse lunges can replace squats.
-6:44-6:45: Move to sauna.
-6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
+Pick one path. 30 min. Working sets:
 
-Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
+Weights
+Back squat — 3 x 4–6
+Barbell Romanian deadlift — 3 x 6–8
+Barbell reverse lunge — 2 x 8–10/leg
+Kneeling rope cable crunch — 2 x 8–12
+
+DB only
+DB front squat — 3 x 6–8
+DB Romanian deadlift — 3 x 8–10
+DB reverse lunge — 2 x 8–10/leg
+DB weighted crunch — 2 x 8–12
+
+KB only
+Double KB front squat — 3 x 6–8
+Double KB Romanian deadlift — 3 x 8–10
+KB reverse lunge — 2 x 8–10/leg
+KB weighted crunch — 2 x 8–12
+
+Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
+Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
+Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
 feed = "lifting"
 id = "upper-b"
-summary = "Gym: Arms + Mile + Sauna"
+summary = "Arms — Strength"
 day = "TH"
 start = "06:15"
-duration_minutes = 45
+duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "ARMS"]
 description = """
-6:15-6:27: Run one easy mile. Do not race the clock.
-6:27-6:44: Arms, alternating for 3 rounds:
-- Cable curl: 10-12.
-- Rope triceps pressdown: 10-12.
-Kettlebell swaps: crush curl 3 x 8-12; close-grip push-up 3 x 8-15. Rest 45-60 seconds between rounds.
-6:44-6:45: Move to sauna.
-6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
+Pick one path. 30 min. Working sets:
 
-Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
+Weights
+Barbell curl — 3 x 6–8
+Rope triceps pressdown — 3 x 8–12
+DB hammer curl — 2 x 10–12
+Kneeling rope cable crunch — 2 x 8–12
+
+DB only
+DB hammer curl — 3 x 6–8
+DB floor triceps extension — 3 x 8–12
+DB supinated curl — 2 x 10–12
+DB weighted crunch — 2 x 8–12
+
+KB only
+KB crush curl — 3 x 6–8
+KB floor triceps extension — 3 x 8–12
+KB curl — 2 x 10–12/side
+KB weighted crunch — 2 x 8–12
+
+Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
+Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
+Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """
 
 [[events]]
 feed = "lifting"
 id = "lower-b"
-summary = "Gym: Shoulders + Mile + Sauna"
+summary = "Shoulders — Strength"
 day = "FR"
 start = "06:15"
-duration_minutes = 45
+duration_minutes = 30
 location = "Gym"
 categories = ["FITNESS", "LIFTING", "SHOULDERS"]
 description = """
-6:15-6:27: Run one easy mile. Do not race the clock.
-6:27-6:44: Shoulders, with one light first set:
-- Seated dumbbell or machine overhead press: 3 x 6-10.
-- Dumbbell lateral raise: 2 x 12-15.
-Kettlebell swaps: single-arm strict press 3 x 6-8 each side, or push press if needed; double farmer walk or march 2 x 30-45 seconds.
-6:44-6:45: Move to sauna.
-6:45-7:00: Sauna if warm and available; then head upstairs to shower and hydrate.
+Pick one path. 30 min. Working sets:
 
-Keep 2-3 clean reps in reserve. If the mile takes longer, trim a lifting set instead of speeding up. Skip sauna if dizzy, ill, or dehydrated.
+Weights
+Barbell overhead press — 3 x 4–6
+DB lateral raise — 3 x 10–15
+DB rear-delt fly — 2 x 10–15
+Kneeling rope cable crunch — 2 x 8–12
+
+DB only
+DB shoulder press — 3 x 6–8
+DB lateral raise — 3 x 10–15
+DB rear-delt fly — 2 x 10–15
+DB weighted crunch — 2 x 8–12
+
+KB only
+KB strict press — 3 x 6–8/side
+KB rear-delt row — 3 x 10–12/side
+KB suitcase march — 2 x 20–30 steps/side
+KB weighted crunch — 2 x 8–12
+
+Progress each path separately: finish all sets at top reps/steps with 1–2 reps left, then add the smallest load and restart at low reps. Otherwise keep the load and build reps.
+Crunches: hold DB/KB at chest. Push-ups: build reps, then use a harder variation.
+Warm up first. Rest 2 min on the first lift; 60–90 sec on the others.
+Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 """

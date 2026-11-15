@@ -32,6 +32,9 @@ jobs:
       - name: Generate calendar feeds
         run: python scripts/generate_calendar.py
 
+      - name: Validate calendar feeds
+        run: python scripts/validate_calendar.py
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the published feeds preserve the weekday 6:15 AM floating schedule."""
+"""Check the 30-minute, choose-one-path workout feeds and subscription identity."""
 
 from __future__ import annotations
 
@@ -18,6 +18,52 @@ SPLIT = {
     3: "Arms",
     4: "Shoulders",
 }
+EVENT_IDS = {
+    0: "upper-a",
+    1: "lower-a",
+    2: "wednesday-choice",
+    3: "upper-b",
+    4: "lower-b",
+}
+PATHS = ("Weights", "DB only", "KB only")
+ABS_FINISHERS = {
+    "Weights": "Kneeling rope cable crunch",
+    "DB only": "DB weighted crunch",
+    "KB only": "KB weighted crunch",
+}
+
+
+def validate_description(description: str, label: str) -> None:
+    notes = description.replace(r"\n", "\n")
+    assert re.search(r"\b(?:pick|choose)\s+one\b", notes, re.I), (
+        f"{label}: missing choose-one instruction"
+    )
+    assert "Progress each path separately:" in notes, (
+        f"{label}: missing independent progression"
+    )
+    assert "Week 4:" in notes, f"{label}: missing lighter-week instruction"
+    assert not re.search(r"\b\d{1,2}:\d{2}\b|\bsauna\b|\bmile\b|swaps", notes, re.I), (
+        f"{label}: obsolete timed itinerary or swap-only notes"
+    )
+    headings = list(re.finditer(r"^(Weights|DB only|KB only)\s*$", notes, re.M))
+    assert tuple(match.group(1) for match in headings) == PATHS, (
+        f"{label}: expected one block for each equipment path"
+    )
+    for index, heading in enumerate(headings):
+        end = headings[index + 1].start() if index + 1 < len(headings) else notes.index(
+            "Progress each path separately:"
+        )
+        block = notes[heading.end():end]
+        exercises = [
+            line for line in block.splitlines()
+            if re.search(r"\b\d+\s*[x×]\s*\d+", line)
+        ]
+        assert len(exercises) == 4, (
+            f"{label}: {heading.group(1)} needs three lifts and a weighted abs finisher"
+        )
+        assert ABS_FINISHERS[heading.group(1)] in exercises[-1], (
+            f"{label}: {heading.group(1)} needs its weighted abs finisher last"
+        )
 
 
 def events_in(text: str) -> list[dict[str, str]]:
@@ -34,6 +80,7 @@ def events_in(text: str) -> list[dict[str, str]]:
 
 
 def main() -> None:
+    active_feeds = {}
     for filename, expected_count in FILES.items():
         text = (PUBLIC / filename).read_text(encoding="utf-8")
         assert text.startswith("BEGIN:VCALENDAR"), f"{filename}: missing calendar start"
@@ -54,21 +101,27 @@ def main() -> None:
                 f"{filename}: wrong first occurrence"
             )
             assert start.hour == 6 and start.minute == 15, f"{filename}: not 6:15 AM"
-            assert end - start == timedelta(minutes=45), f"{filename}: not 45 minutes"
+            assert end - start == timedelta(minutes=30), f"{filename}: not 30 minutes"
             assert SPLIT[day] in event["SUMMARY"], f"{filename}: wrong split day"
             assert event["RRULE"] == "FREQ=WEEKLY", f"{filename}: not recurring"
-            assert "Kettlebell swaps:" in event["DESCRIPTION"], (
-                f"{filename}: missing kettlebell alternatives"
-            )
-            assert "6:45-7:00: Sauna" in event["DESCRIPTION"], (
-                f"{filename}: missing 15-minute sauna"
-            )
+            assert int(event["SEQUENCE"]) >= 10, f"{filename}: stale update sequence"
+            validate_description(event["DESCRIPTION"], f"{filename}: {event['SUMMARY']}")
+            feed_id = "all" if filename == "workouts.ics" else "lifting"
+            expected_uid = f"{feed_id}-{EVENT_IDS[day]}@workout-calendar.rowlandpettit"
+            assert event["UID"] == expected_uid, f"{filename}: changed subscription UID"
             assert event["UID"] not in uids, f"{filename}: duplicate UID"
             days.add(day)
             uids.add(event["UID"])
         if expected_count:
             assert days == set(SPLIT), f"{filename}: missing weekday"
+            active_feeds[filename] = {
+                event["DTSTART"]: {key: value for key, value in event.items() if key != "UID"}
+                for event in events
+            }
         print(f"OK public/{filename}: {expected_count} floating events")
+    assert active_feeds["lifting.ics"] == active_feeds["workouts.ics"], (
+        "Active feeds disagree on workout content or schedule"
+    )
 
 
 if __name__ == "__main__":

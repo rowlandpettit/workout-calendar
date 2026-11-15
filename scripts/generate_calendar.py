@@ -345,7 +345,7 @@ def generate(root: Path) -> None:
     all_feed = {
         "name": "Rowland Fitness - All Workouts",
         "filename": "workouts.ics",
-        "description": "Weekday gym sessions at 6:15 AM local: one easy mile, a short lift, then an optional 15-minute sauna.",
+        "description": "30-minute weekday strength sessions. Choose one complete path: Weights, DB only, or KB only. Progress each path separately.",
         "color": "#2f5d8c",
     }
     all_lines = calendar_lines(
