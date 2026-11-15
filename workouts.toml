@@ -4,7 +4,7 @@ timezone = "America/New_York"
 floating_times = true
 namespace = "workout-calendar.rowlandpettit"
 site_url = "https://rowlandpettit.com/workout-calendar"
-sequence = 10
+sequence = 11
 
 [logging]
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdow-9RJsW8BFIKvPCnewVOcb3cKO0uLMo1UWAcH5WPHzpDcg/viewform?usp=publish-editor"
@@ -25,7 +25,7 @@ color = "#c94f2d"
 [[events]]
 feed = "lifting"
 id = "upper-a"
-summary = "Chest — Strength"
+summary = "Chest"
 day = "MO"
 start = "06:15"
 duration_minutes = 30
@@ -61,7 +61,7 @@ Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 [[events]]
 feed = "lifting"
 id = "lower-a"
-summary = "Back — Strength"
+summary = "Back"
 day = "TU"
 start = "06:15"
 duration_minutes = 30
@@ -97,7 +97,7 @@ Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 [[events]]
 feed = "lifting"
 id = "wednesday-choice"
-summary = "Legs — Strength"
+summary = "Legs"
 day = "WE"
 start = "06:15"
 duration_minutes = 30
@@ -133,7 +133,7 @@ Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 [[events]]
 feed = "lifting"
 id = "upper-b"
-summary = "Arms — Strength"
+summary = "Arms"
 day = "TH"
 start = "06:15"
 duration_minutes = 30
@@ -169,7 +169,7 @@ Week 4: use 2 / 1 / 1 / 1 working sets; repeat the 4-week cycle.
 [[events]]
 feed = "lifting"
 id = "lower-b"
-summary = "Shoulders — Strength"
+summary = "Shoulders"
 day = "FR"
 start = "06:15"
 duration_minutes = 30
